@@ -1,0 +1,285 @@
+        -:    0:Source:C:/Users/astan/Desktop/OOP/lab02-04/service/service.c
+        -:    0:Graph:C:\Users\astan\Desktop\OOP\lab02-04\cmake-build-debug-coverage\CMakeFiles\lab02_04.dir\service\service.c.gcno
+        -:    0:Data:C:\Users\astan\Desktop\OOP\lab02-04\cmake-build-debug-coverage\CMakeFiles\lab02_04.dir\service\service.c.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by astan on 3/16/2023.
+        -:    3://
+        -:    4:#include "service.h"
+        -:    5:#include <string.h>
+        -:    6:#include <stdio.h>
+        -:    7:
+        -:    8:/*
+        -:    9: * Creates the service object and returns it.
+        -:   10: */
+function createService called 6 returned 100% blocks executed 100%
+        6:   11:Service createService(){
+        6:   11-block  0
+        -:   12:    Service service;
+        6:   13:    service.repo = createRepo();
+        6:   13-block  0
+call    0 returned 6
+        6:   14:    return service;
+        -:   15:}
+        -:   16:/*
+        -:   17: * Frees the memory from service
+        -:   18: */
+function destroyService called 6 returned 100% blocks executed 100%
+        6:   19:void destroyService(Service* service){
+        6:   19-block  0
+        6:   20:    destroyRepo(service->repo);
+        6:   20-block  0
+call    0 returned 6
+        6:   21:}
+        -:   22:/*
+        -:   23: * Receives raw material name, manufacturer, and quantity, creates and adds the material into repo
+        -:   24: * and returns 0 if everything was successful. Returns 1 if material is invalid.
+        -:   25: */
+function addRawMaterialService called 24 returned 100% blocks executed 100%
+       24:   26:int addRawMaterialService(Service* service, char* name, char* manufacturer, int quantity){
+       24:   26-block  0
+       24:   27:    Entity e = createRawMaterial(name, manufacturer, quantity);
+       24:   27-block  0
+call    0 returned 24
+       24:   28:    if (validate_material(e)){
+call    0 returned 24
+branch  1 taken 3 (fallthrough)
+branch  2 taken 21
+        3:   29:        destroyRawMaterial(e);
+        3:   29-block  0
+call    0 returned 3
+        3:   30:        return 1;
+        -:   31:    }
+       21:   32:    addEntity(service->repo, e);
+       21:   32-block  0
+call    0 returned 21
+        -:   33:
+       21:   34:    return 0;
+        -:   35:}
+        -:   36:
+        -:   37:/*
+        -:   38: * Deletes the material with the name provided. Returns 0 if material exists,
+        -:   39: * 1 if otherwise.
+        -:   40: */
+function deleteMaterialService called 7 returned 100% blocks executed 100%
+        7:   41:int deleteMaterialService(Service* service, char* name){
+        7:   41-block  0
+        7:   42:    if (service->repo->dimension == 0){
+        7:   42-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 6
+        1:   43:        return 1;
+        1:   43-block  0
+        -:   44:    }
+       12:   45:    for(int i = 0;i < service->repo->dimension;i++){
+        6:   45-block  0
+        6:   45-block  1
+       12:   45-block  2
+branch  0 taken 10
+branch  1 taken 2 (fallthrough)
+       10:   46:        if (strcmp(getName(service->repo->elements[i]), name) == 0){
+       10:   46-block  0
+call    0 returned 10
+branch  1 taken 4 (fallthrough)
+branch  2 taken 6
+        4:   47:            delete_material(service->repo, i);
+        4:   47-block  0
+call    0 returned 4
+        4:   48:            return 0;
+        -:   49:        }
+        -:   50:    }
+        2:   51:    return 1;
+        2:   51-block  0
+        -:   52:}
+        -:   53:/*
+        -:   54: * Modifies a material from repo.
+        -:   55: * Returns 1 if not successful. 0 if successful.
+        -:   56: */
+function modifyMaterialService called 3 returned 100% blocks executed 100%
+        3:   57:int modifyMaterialService(Service* service, char* name, char* manufacturer, int quantity){
+        3:   57-block  0
+        3:   58:    RawMaterial* r = createRawMaterial(name, manufacturer, quantity);
+        3:   58-block  0
+call    0 returned 3
+        3:   59:    if (validate_material(r)){
+call    0 returned 3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 2
+        1:   60:        destroyRawMaterial(r);
+        1:   60-block  0
+call    0 returned 1
+        1:   61:        return 1;
+        -:   62:    }
+        2:   63:    if (deleteMaterialService(service, name)){
+        2:   63-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   64:        destroyRawMaterial(r);
+        1:   64-block  0
+call    0 returned 1
+        1:   65:        return 1;
+        -:   66:    }
+        1:   67:    destroyRawMaterial(r);
+        1:   67-block  0
+call    0 returned 1
+        1:   68:    return addRawMaterialService(service, name, manufacturer, quantity);
+call    0 returned 1
+        -:   69:}
+        -:   70:
+function compareAscendingName called 3 returned 100% blocks executed 100%
+        3:   71:int compareAscendingName(RawMaterial* r1, RawMaterial* r2){
+        3:   71-block  0
+        3:   72:    return strcmp(r1->name, r2->name);
+        3:   72-block  0
+        -:   73:}
+        -:   74:
+function compareDescendingName called 3 returned 100% blocks executed 100%
+        3:   75:int compareDescendingName(RawMaterial* r1, RawMaterial* r2){
+        3:   75-block  0
+        3:   76:    return -strcmp(r1->name, r2->name);
+        3:   76-block  0
+        -:   77:}
+        -:   78:
+function compareAscendingQuantity called 3 returned 100% blocks executed 100%
+        3:   79:int compareAscendingQuantity(RawMaterial* r1, RawMaterial* r2){
+        3:   79-block  0
+        3:   80:    return r1->quantity - r2->quantity;
+        3:   80-block  0
+        -:   81:}
+        -:   82:
+function compareDescendingQuantity called 3 returned 100% blocks executed 100%
+        3:   83:int compareDescendingQuantity(RawMaterial* r1, RawMaterial* r2){
+        3:   83-block  0
+        3:   84:    return r2->quantity - r1->quantity;
+        3:   84-block  0
+        -:   85:}
+        -:   86:
+function sort called 4 returned 100% blocks executed 100%
+        4:   87:void sort(Repo* r, CompareFunction cmpf){
+        4:   87-block  0
+        -:   88:    int i, j;
+       12:   89:    for (i = 0; i < r->dimension - 1;i++){
+        4:   89-block  0
+        8:   89-block  1
+       12:   89-block  2
+branch  0 taken 8
+branch  1 taken 4 (fallthrough)
+       20:   90:        for(j = i + 1; j < r->dimension;j++){
+        8:   90-block  0
+       12:   90-block  1
+       20:   90-block  2
+branch  0 taken 12
+branch  1 taken 8 (fallthrough)
+       12:   91:            RawMaterial* p1 = get(r, i);
+       12:   91-block  0
+call    0 returned 12
+       12:   92:            RawMaterial* p2 = get(r, j);
+call    0 returned 12
+       12:   93:            if (cmpf(p1, p2) > 0){
+call    0 returned 12
+branch  1 taken 6 (fallthrough)
+branch  2 taken 6
+        6:   94:                set(r, i, p2);
+        6:   94-block  0
+call    0 returned 6
+        6:   95:                set(r, j, p1);
+call    0 returned 6
+        -:   96:            }
+        -:   97:        }
+        -:   98:    }
+        4:   99:}
+        -:  100:
+function sortService called 4 returned 100% blocks executed 100%
+        4:  101:Repo* sortService(Service* service, CompareFunction compare){
+        4:  101-block  0
+        4:  102:    Repo* copyRepo = getCopyRepo(service->repo);
+        4:  102-block  0
+call    0 returned 4
+        4:  103:    sort(copyRepo, compare);
+call    0 returned 4
+        4:  104:    return copyRepo;
+        -:  105:}
+        -:  106:
+function filterLetter called 6 returned 100% blocks executed 100%
+        6:  107:int filterLetter(RawMaterial* r, char l){
+        6:  107-block  0
+        6:  108:    return r->name[0] == l;
+        6:  108-block  0
+        -:  109:}
+        -:  110:
+function filterQuantity called 6 returned 100% blocks executed 100%
+        6:  111:int filterQuantity(RawMaterial* r, int quantity){
+        6:  111-block  0
+        6:  112:    printf("Material: %s\nCantitate:%d\nQuantity:%d\nValoare:%d\n\n", r->name, r->quantity, quantity, r->quantity < quantity);
+        6:  112-block  0
+call    0 returned 6
+        6:  113:    return r->quantity < quantity;
+        -:  114:}
+        -:  115:
+        -:  116:/*
+        -:  117: * Filters the repo and returns the items whose name begin with letter l
+        -:  118: *
+        -:  119: */
+function filterLetterService called 1 returned 100% blocks executed 100%
+        1:  120:Repo* filterLetterService(Service* service, char l){
+        1:  120-block  0
+        1:  121:    Repo* cr = createRepo();
+        1:  121-block  0
+call    0 returned 1
+        1:  122:    int dim = 0;
+        1:  123:    cr->capacity = service->repo->capacity;
+        1:  124:    free(cr->elements);
+        1:  125:    cr->elements = malloc(sizeof(RawMaterial*) * service->repo->capacity);
+        7:  126:    for (int i = 0;i < service->repo->dimension;i++){
+        6:  126-block  0
+        7:  126-block  1
+branch  0 taken 6
+branch  1 taken 1 (fallthrough)
+        6:  127:        if (filterLetter(service->repo->elements[i], l)) {
+        6:  127-block  0
+call    0 returned 6
+branch  1 taken 3 (fallthrough)
+branch  2 taken 3
+        3:  128:            cr->elements[dim] = copyRawMaterial(service->repo->elements[i]);
+        3:  128-block  0
+call    0 returned 3
+        3:  129:            dim++;
+        -:  130:        }
+        -:  131:    }
+        1:  132:    cr->dimension = dim;
+        1:  133:    return cr;
+        1:  133-block  0
+        -:  134:}
+        -:  135:
+function filterQuantityService called 1 returned 100% blocks executed 100%
+        1:  136:Repo* filterQuantityService(Service* service, int quantity){
+        1:  136-block  0
+        1:  137:    Repo* cr = createRepo();
+        1:  137-block  0
+call    0 returned 1
+        1:  138:    int dim = 0;
+        1:  139:    cr->capacity = service->repo->capacity;
+        1:  140:    free(cr->elements);
+        1:  141:    cr->elements = malloc(sizeof(RawMaterial*) * service->repo->capacity);
+        7:  142:    for (int i = 0;i < service->repo->dimension;i++){
+        6:  142-block  0
+        7:  142-block  1
+branch  0 taken 6
+branch  1 taken 1 (fallthrough)
+        6:  143:        if (filterQuantity(service->repo->elements[i], quantity)) {
+        6:  143-block  0
+call    0 returned 6
+branch  1 taken 4 (fallthrough)
+branch  2 taken 2
+        4:  144:            cr->elements[dim] = copyRawMaterial(service->repo->elements[i]);
+        4:  144-block  0
+call    0 returned 4
+        4:  145:            dim++;
+        -:  146:        }
+        -:  147:    }
+        1:  148:    cr->dimension = dim;
+        1:  149:    return cr;
+        1:  149-block  0
+        -:  150:}

@@ -1,0 +1,37 @@
+        -:    0:Source:C:/Users/astan/Desktop/OOP/lab02-04/validator.c
+        -:    0:Graph:C:\Users\astan\Desktop\OOP\lab02-04\cmake-build-debug-coverage\CMakeFiles\lab02_04.dir\validator.c.gcno
+        -:    0:Data:C:\Users\astan\Desktop\OOP\lab02-04\cmake-build-debug-coverage\CMakeFiles\lab02_04.dir\validator.c.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by astan on 3/17/2023.
+        -:    3://
+        -:    4:
+        -:    5:#include "domain/RawMaterial.h"
+        -:    6:#include <string.h>
+        -:    7:#include "validator.h"
+        -:    8:
+function validate_material called 27 returned 100% blocks executed 100%
+       27:    9:int validate_material(RawMaterial* r){
+       27:    9-block  0
+       27:   10:    if (strlen(getManufacturer(r)) < 1) return 1;
+       27:   10-block  0
+call    0 returned 27
+branch  1 taken 1 (fallthrough)
+branch  2 taken 26
+        1:   10-block  1
+       26:   11:    if (strlen(getName(r)) < 1) return 1;
+       26:   11-block  0
+call    0 returned 26
+branch  1 taken 1 (fallthrough)
+branch  2 taken 25
+        1:   11-block  1
+       25:   12:    if (getQuantity(r) < 0) return 1;
+       25:   12-block  0
+call    0 returned 25
+branch  1 taken 2 (fallthrough)
+branch  2 taken 23
+        2:   12-block  1
+       23:   13:    return 0;
+       23:   13-block  0
+        -:   14:}

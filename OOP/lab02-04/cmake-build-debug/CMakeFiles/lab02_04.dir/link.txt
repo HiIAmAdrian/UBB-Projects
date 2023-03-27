@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/lab02_04.dir/main.c.o CMakeFiles/lab02_04.dir/domain/RawMaterial.c.o CMakeFiles/lab02_04.dir/repo/repo.c.o CMakeFiles/lab02_04.dir/service/service.c.o CMakeFiles/lab02_04.dir/UI/ui.c.o CMakeFiles/lab02_04.dir/teste/teste.c.o CMakeFiles/lab02_04.dir/validator.c.o -o lab02_04 

@@ -1,0 +1,84 @@
+        -:    0:Source:C:/Users/astan/Desktop/OOP/lab02-04/domain/RawMaterial.c
+        -:    0:Graph:C:\Users\astan\Desktop\OOP\lab02-04\cmake-build-debug-coverage\CMakeFiles\lab02_04.dir\domain\RawMaterial.c.gcno
+        -:    0:Data:C:\Users\astan\Desktop\OOP\lab02-04\cmake-build-debug-coverage\CMakeFiles\lab02_04.dir\domain\RawMaterial.c.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by astan on 3/15/2023.
+        -:    3://
+        -:    4:#include "RawMaterial.h"
+        -:    5:#include <stdlib.h>
+        -:    6:#include <string.h>
+        -:    7:#include <stdio.h>
+        -:    8:
+function createRawMaterial called 27 returned 100% blocks executed 100%
+       27:    9:RawMaterial* createRawMaterial(char* name, char* manufacturer, int quantity){
+       27:    9-block  0
+       27:   10:    RawMaterial* p = malloc(sizeof(RawMaterial));
+       27:   11:    p->quantity = quantity;
+        -:   12:
+       27:   13:    int stringLength = strlen(manufacturer) + 1;
+       27:   14:    p->manufacturer = malloc(sizeof(char) * stringLength);
+       27:   15:    strcpy_s(p->manufacturer, stringLength, manufacturer);
+       27:   15-block  0
+call    0 returned 27
+        -:   16:
+       27:   17:    stringLength = strlen(name) + 1;
+       27:   18:    p->name = malloc(sizeof(char) * stringLength);
+       27:   19:    strcpy_s(p->name, stringLength, name);
+call    0 returned 27
+        -:   20:
+       27:   21:    return p;
+        -:   22:
+        -:   23:}
+        -:   24:
+        -:   25:
+        -:   26:
+function destroyRawMaterial called 46 returned 100% blocks executed 100%
+       46:   27:void destroyRawMaterial(RawMaterial* r){
+       46:   27-block  0
+       46:   28:    free(r->name);
+       46:   29:    free(r->manufacturer);
+       46:   30:    free(r);
+       46:   31:}
+        -:   32:
+function getQuantity called 25 returned 100% blocks executed 100%
+       25:   33:int getQuantity(RawMaterial* r){
+       25:   33-block  0
+       25:   34:    return r->quantity;
+       25:   34-block  0
+        -:   35:}
+        -:   36:
+function getName called 36 returned 100% blocks executed 100%
+       36:   37:char* getName(RawMaterial* r){
+       36:   37-block  0
+       36:   38:    return r->name;
+       36:   38-block  0
+        -:   39:}
+        -:   40:
+function getManufacturer called 27 returned 100% blocks executed 100%
+       27:   41:char* getManufacturer(RawMaterial* r){
+       27:   41-block  0
+       27:   42:    return r->manufacturer;
+       27:   42-block  0
+        -:   43:}
+        -:   44:
+function copyRawMaterial called 19 returned 100% blocks executed 100%
+       19:   45:RawMaterial* copyRawMaterial(RawMaterial* r){
+       19:   45-block  0
+       19:   46:    RawMaterial* cR = malloc(sizeof(RawMaterial));
+       19:   47:    int stringLength = strlen(r->name) + 1;
+       19:   48:    cR->name = malloc(sizeof(char) * stringLength);
+       19:   49:    strcpy_s(cR->name, stringLength, r->name);
+       19:   49-block  0
+call    0 returned 19
+        -:   50:
+       19:   51:    stringLength = strlen(r->manufacturer) + 1;
+       19:   52:    cR->manufacturer = malloc(sizeof(char) * stringLength);
+       19:   53:    strcpy_s(cR->manufacturer, stringLength, r->manufacturer);
+call    0 returned 19
+        -:   54:
+       19:   55:    cR->quantity = r->quantity;
+        -:   56:
+       19:   57:    return cR;
+        -:   58:}

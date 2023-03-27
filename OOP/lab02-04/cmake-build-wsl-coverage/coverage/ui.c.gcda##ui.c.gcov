@@ -1,0 +1,358 @@
+        -:    0:Source:/mnt/c/Users/astan/Desktop/OOP/lab02-04/UI/ui.c
+        -:    0:Graph:/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-wsl-coverage/CMakeFiles/lab02_04.dir/UI/ui.c.gcno
+        -:    0:Data:/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-wsl-coverage/CMakeFiles/lab02_04.dir/UI/ui.c.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by astan on 3/16/2023.
+        -:    3://
+        -:    4:#include "../service/service.h"
+        -:    5:#include <stdio.h>
+        -:    6:
+function add_material called 0 returned 0% blocks executed 0%
+    #####:    7:void add_material(Service* service){
+        -:    8:    int quantity;
+        -:    9:    char name[20];
+        -:   10:    char manufacturer[20];
+    #####:   11:    setbuf(stdout, 0);
+    %%%%%:   11-block  0
+call    0 never executed
+    #####:   12:    printf("Introdu numele:\n");
+call    0 never executed
+    #####:   13:    scanf("%s", name);
+call    0 never executed
+    #####:   14:    setbuf(stdout, 0);
+call    0 never executed
+    #####:   15:    printf("Introdu producatorul:\n");
+call    0 never executed
+    #####:   16:    scanf("%s", manufacturer);
+call    0 never executed
+    #####:   17:    setbuf(stdout, 0);
+call    0 never executed
+    #####:   18:    printf("Introdu cantitatea:\n");
+call    0 never executed
+    #####:   19:    scanf("%d", &quantity);
+call    0 never executed
+    #####:   20:    if (addRawMaterialService(service,name, manufacturer, quantity)){
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   21:        setbuf(stdout, 0);
+    %%%%%:   21-block  0
+call    0 never executed
+    #####:   22:        printf("Material invalid!\n");
+call    0 never executed
+        -:   23:    }
+        -:   24:    else{
+    #####:   25:        setbuf(stdout, 0);
+    %%%%%:   25-block  0
+call    0 never executed
+    #####:   26:        printf("Material adaugat cu sucees!\n");
+call    0 never executed
+        -:   27:    }
+    #####:   28:}
+        -:   29:
+function print_list called 0 returned 0% blocks executed 0%
+    #####:   30:void print_list(Service* service){
+    #####:   31:    for (int i = 0; i < service->repo->dimension;i++){
+    %%%%%:   31-block  0
+    %%%%%:   31-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:   32:        RawMaterial* r = get(service->repo, i);
+    %%%%%:   32-block  0
+call    0 never executed
+    #####:   33:        setbuf(stdout, 0);
+call    0 never executed
+    #####:   34:        printf("Nume: %s\nProducator:%s\nCantitate:%d\n\n", r->name, r->manufacturer, r->quantity);
+call    0 never executed
+        -:   35:    }
+    #####:   36:}
+        -:   37:
+function deleteMaterial called 0 returned 0% blocks executed 0%
+    #####:   38:void deleteMaterial(Service* service){
+        -:   39:    char name[20];
+        -:   40:
+    #####:   41:    setbuf(stdout, 0);
+    %%%%%:   41-block  0
+call    0 never executed
+    #####:   42:    printf("Introdu numele materialului: ");
+call    0 never executed
+    #####:   43:    scanf("%s", name);
+call    0 never executed
+    #####:   44:    if (deleteMaterialService(service, name)){
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   45:        setbuf(stdout, 0);
+    %%%%%:   45-block  0
+call    0 never executed
+    #####:   46:        printf("Materialul nu exista!\n");
+call    0 never executed
+        -:   47:    }
+        -:   48:    else{
+    #####:   49:        setbuf(stdout, 0);
+    %%%%%:   49-block  0
+call    0 never executed
+    #####:   50:        printf("Material sters cu succes!\n");
+call    0 never executed
+        -:   51:    }
+    #####:   52:}
+        -:   53:
+function modifyMaterial called 0 returned 0% blocks executed 0%
+    #####:   54:void modifyMaterial(Service* service){
+        -:   55:    int quantity;
+        -:   56:    char name[20];
+        -:   57:    char manufacturer[20];
+    #####:   58:    setbuf(stdout, 0);
+    %%%%%:   58-block  0
+call    0 never executed
+    #####:   59:    printf("Introdu numele materialului:\n");
+call    0 never executed
+    #####:   60:    scanf("%s", name);
+call    0 never executed
+    #####:   61:    setbuf(stdout, 0);
+call    0 never executed
+    #####:   62:    printf("Introdu noul producator:\n");
+call    0 never executed
+    #####:   63:    scanf("%s", manufacturer);
+call    0 never executed
+    #####:   64:    setbuf(stdout, 0);
+call    0 never executed
+    #####:   65:    printf("Introdu noua cantitate:\n");
+call    0 never executed
+    #####:   66:    scanf("%d", &quantity);
+call    0 never executed
+    #####:   67:    if (modifyMaterialService(service, name, manufacturer, quantity)){
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   68:        setbuf(stdout, 0);
+    %%%%%:   68-block  0
+call    0 never executed
+    #####:   69:        printf("Operatiune invalida!\n");
+call    0 never executed
+        -:   70:    }
+        -:   71:    else{
+    #####:   72:        setbuf(stdout, 0);
+    %%%%%:   72-block  0
+call    0 never executed
+    #####:   73:        printf("Material modificat cu succes!\n");
+call    0 never executed
+        -:   74:    }
+    #####:   75:}
+        -:   76:
+function sortMaterials called 0 returned 0% blocks executed 0%
+    #####:   77:void sortMaterials(Service* service){
+    #####:   78:    int option = 0;
+    #####:   79:    Repo* r = NULL;
+    #####:   80:    setbuf(stdout, 0);
+    %%%%%:   80-block  0
+call    0 never executed
+    #####:   81:    printf("OPTIUNI SORTARI:\n1.Sorteaza crescator dupa cantitate.\n2.Sorteaza descrescator dupa cantitate.\n3.Sorteaza crescator dupa nume.\n4.Sorteaza descrescator dupa nume.\n");
+call    0 never executed
+    #####:   82:    scanf("%d", &option);
+call    0 never executed
+    #####:   83:    if (option == 1){
+branch  0 never executed
+branch  1 never executed
+    #####:   84:        r = sortService(service, (CompareFunction) compareAscendingQuantity);
+    %%%%%:   84-block  0
+call    0 never executed
+    #####:   85:    } else if (option == 2) {
+    %%%%%:   85-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   86:        r = sortService(service, (CompareFunction) compareDescendingQuantity);
+    %%%%%:   86-block  0
+call    0 never executed
+    #####:   87:    } else if (option == 3) {
+    %%%%%:   87-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   88:        r = sortService(service, (CompareFunction) compareAscendingName);
+    %%%%%:   88-block  0
+call    0 never executed
+    #####:   89:    } else if (option == 4){
+    %%%%%:   89-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   90:        r = sortService(service, (CompareFunction) compareDescendingName);
+    %%%%%:   90-block  0
+call    0 never executed
+        -:   91:    }
+    #####:   92:    for (int i = 0; i < r->dimension;i++){
+    %%%%%:   92-block  0
+    %%%%%:   92-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:   93:        RawMaterial* m = get(service->repo, i);
+    %%%%%:   93-block  0
+call    0 never executed
+    #####:   94:        setbuf(stdout, 0);
+call    0 never executed
+    #####:   95:        printf("Nume: %s\nProducator:%s\nCantitate:%d\n\n", m->name, m->manufacturer, m->quantity);
+call    0 never executed
+        -:   96:    }
+        -:   97:
+    #####:   98:    destroyRepo(r);
+    %%%%%:   98-block  0
+call    0 never executed
+    #####:   99:}
+        -:  100:
+function filterMaterials called 0 returned 0% blocks executed 0%
+    #####:  101:void filterMaterials(Service* service){
+    #####:  102:    int option = 0;
+    #####:  103:    setbuf(stdout, 0);
+    %%%%%:  103-block  0
+call    0 never executed
+    #####:  104:    printf("FILTRARI:\n1. Filtreaza nume dupa litera.\n 2. Filtreaza dupa cantitate.\n");
+call    0 never executed
+    #####:  105:    scanf("%d",&option);
+call    0 never executed
+    #####:  106:    getchar();
+call    0 never executed
+    #####:  107:    Repo* r = NULL;
+    #####:  108:    if (option == 1){
+branch  0 never executed
+branch  1 never executed
+        -:  109:        char l;
+    #####:  110:        setbuf(stdout, 0);
+    %%%%%:  110-block  0
+call    0 never executed
+    #####:  111:        printf("Introdu litera: ");
+call    0 never executed
+    #####:  112:        scanf("%c", &l);
+call    0 never executed
+    #####:  113:        r = filterLetterService(service, l);
+call    0 never executed
+        -:  114:    }
+    #####:  115:    else if (option == 2){
+    %%%%%:  115-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  116:        int quantity;
+    #####:  117:        setbuf(stdout, 0);
+    %%%%%:  117-block  0
+call    0 never executed
+    #####:  118:        printf("Introdu cantitatea: ");
+call    0 never executed
+    #####:  119:        scanf("%d", &quantity);
+call    0 never executed
+    #####:  120:        r = filterQuantityService(service, quantity);
+call    0 never executed
+        -:  121:    } else {
+    #####:  122:        setbuf(stdout, 0);
+    %%%%%:  122-block  0
+call    0 never executed
+    #####:  123:        printf("Optiune invalida!\n");
+call    0 never executed
+        -:  124:    }
+    #####:  125:    for (int i = 0; i < r->dimension;i++){
+    %%%%%:  125-block  0
+    %%%%%:  125-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:  126:        RawMaterial* m = get(r, i);
+    %%%%%:  126-block  0
+call    0 never executed
+        -:  127:
+    #####:  128:        setbuf(stdout, 0);
+call    0 never executed
+    #####:  129:        printf("Nume: %s\nProducator:%s\nCantitate:%d\n\n", m->name, m->manufacturer, m->quantity);
+call    0 never executed
+        -:  130:    }
+    #####:  131:    destroyRepo(r);
+    %%%%%:  131-block  0
+call    0 never executed
+    #####:  132:}
+        -:  133:
+function free_memory called 0 returned 0% blocks executed 0%
+    #####:  134:void free_memory(Service* service){
+    #####:  135:    destroyService(service);
+    %%%%%:  135-block  0
+call    0 never executed
+    #####:  136:}
+        -:  137:
+function run called 0 returned 0% blocks executed 0%
+    #####:  138:void run(){
+    #####:  139:    Service service = createService();
+    %%%%%:  139-block  0
+call    0 never executed
+    #####:  140:    setbuf(stdout, 0);
+call    0 never executed
+    #####:  141:    printf("Bine ati venit!\n");
+call    0 never executed
+    #####:  142:    while(1){
+    #####:  143:        int cmd = 0;
+    #####:  144:        setbuf(stdout, 0);
+    %%%%%:  144-block  0
+call    0 never executed
+    #####:  145:        printf("1. Adauga materie prima\n2. Afiseaza lista de materii prime\n3. Sterge un material.\n4. Modifica un material\n5. Sorteaza lista de materiale.\n6. Filtreaza\n7. Exit\n");
+call    0 never executed
+    #####:  146:        scanf("%d", &cmd);
+call    0 never executed
+    #####:  147:        if (cmd == 1) {
+branch  0 never executed
+branch  1 never executed
+    #####:  148:            add_material(&service);
+    %%%%%:  148-block  0
+call    0 never executed
+        -:  149:        }
+    #####:  150:        else if (cmd == 2){
+    %%%%%:  150-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  151:            print_list(&service);
+    %%%%%:  151-block  0
+call    0 never executed
+        -:  152:        }
+    #####:  153:        else if (cmd == 3){
+    %%%%%:  153-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  154:            deleteMaterial(&service);
+    %%%%%:  154-block  0
+call    0 never executed
+        -:  155:        }
+    #####:  156:        else if (cmd == 4) {
+    %%%%%:  156-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  157:            modifyMaterial(&service);
+    %%%%%:  157-block  0
+call    0 never executed
+        -:  158:        }
+    #####:  159:        else if (cmd == 5){
+    %%%%%:  159-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  160:            sortMaterials(&service);
+    %%%%%:  160-block  0
+call    0 never executed
+        -:  161:        }
+    #####:  162:        else if (cmd == 6){
+    %%%%%:  162-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  163:            filterMaterials(&service);
+    %%%%%:  163-block  0
+call    0 never executed
+        -:  164:        }
+    #####:  165:        else if (cmd == 7){
+    %%%%%:  165-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  166:            break;
+        -:  167:        }
+        -:  168:        else{
+    #####:  169:            setbuf(stdout, 0);
+    %%%%%:  169-block  0
+call    0 never executed
+    #####:  170:            printf("Comanda invalida!\n");
+call    0 never executed
+        -:  171:        }
+        -:  172:    }
+    #####:  173:    free_memory(&service);
+    %%%%%:  173-block  0
+call    0 never executed
+    #####:  174:}

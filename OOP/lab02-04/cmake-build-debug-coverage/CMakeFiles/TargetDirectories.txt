@@ -1,0 +1,3 @@
+/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/CMakeFiles/lab02_04.dir
+/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/CMakeFiles/edit_cache.dir
+/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/CMakeFiles/rebuild_cache.dir

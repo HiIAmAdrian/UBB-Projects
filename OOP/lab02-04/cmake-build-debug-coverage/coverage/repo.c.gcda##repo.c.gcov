@@ -1,0 +1,152 @@
+        -:    0:Source:C:/Users/astan/Desktop/OOP/lab02-04/repo/repo.c
+        -:    0:Graph:C:\Users\astan\Desktop\OOP\lab02-04\cmake-build-debug-coverage\CMakeFiles\lab02_04.dir\repo\repo.c.gcno
+        -:    0:Data:C:\Users\astan\Desktop\OOP\lab02-04\cmake-build-debug-coverage\CMakeFiles\lab02_04.dir\repo\repo.c.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://
+        -:    2:// Created by astan on 3/15/2023.
+        -:    3://
+        -:    4:#include "repo.h"
+        -:    5:#include <stdlib.h>
+        -:    6:
+        -:    7:/*
+        -:    8: * Receives an entity and adds it to the repo.
+        -:    9: * Returns 0 if everything was successful.
+        -:   10: */
+function addEntity called 27 returned 100% blocks executed 100%
+       27:   11:int addEntity(Repo* r, Entity e){
+       27:   11-block  0
+       27:   12:    if (r->dimension < r->capacity){
+       27:   12-block  0
+branch  0 taken 21 (fallthrough)
+branch  1 taken 6
+       21:   13:        r->elements[r->dimension] = e;
+       21:   14:        r->dimension++;
+       21:   14-block  0
+        -:   15:    }
+        -:   16:    else {
+        6:   17:        ensureCapacity(r);
+        6:   17-block  0
+call    0 returned 6
+        6:   18:        addEntity(r, e);
+call    0 returned 6
+        -:   19:    }
+       27:   20:    return 0;
+       27:   20-block  0
+        -:   21:}
+        -:   22:/*
+        -:   23: * Function that is used to resize the repo when capacity limit is reached
+        -:   24: */
+function ensureCapacity called 6 returned 100% blocks executed 100%
+        6:   25:void ensureCapacity(Repo* r){
+        6:   25-block  0
+        6:   26:    Entity* nElems = malloc(sizeof(Entity) * (r->capacity * 2));
+       20:   27:    for(int i = 0; i < r->dimension;i++){
+        6:   27-block  0
+       14:   27-block  1
+       20:   27-block  2
+branch  0 taken 14
+branch  1 taken 6 (fallthrough)
+       14:   28:        nElems[i] = r->elements[i];
+        -:   29:    }
+        6:   30:    free(r->elements);
+        6:   31:    r->elements = nElems;
+        6:   32:    r->capacity = r->capacity * 2;
+        6:   33:}
+        -:   34:/*
+        -:   35: * function that creates the repo
+        -:   36: */
+function createRepo called 12 returned 100% blocks executed 100%
+       12:   37:Repo* createRepo(){
+       12:   37-block  0
+       12:   38:    Repo* r = malloc(sizeof(Repo));
+       12:   39:    r->dimension = 0;
+       12:   40:    r->capacity = 2;
+       12:   41:    r->elements = malloc(sizeof(Entity) * r->capacity);
+       12:   42:    return r;
+       12:   42-block  0
+        -:   43:}
+        -:   44:
+function destroyRepo called 12 returned 100% blocks executed 100%
+       12:   45:void destroyRepo(Repo* r){
+       12:   45-block  0
+       48:   46:    for (int i = 0; i < r->dimension;i++){
+       12:   46-block  0
+       48:   46-block  1
+branch  0 taken 36
+branch  1 taken 12 (fallthrough)
+       36:   47:        destroyRawMaterial(r->elements[i]);
+       36:   47-block  0
+call    0 returned 36
+        -:   48:    }
+       12:   49:    free(r->elements);
+       12:   50:    free(r);
+       12:   51:}
+        -:   52:
+        -:   53:
+        -:   54:/*
+        -:   55: * Receives the order of the material in the repo and deletes it.
+        -:   56: *
+        -:   57: */
+function delete_material called 4 returned 100% blocks executed 100%
+        4:   58:void delete_material(Repo* r, int i){
+        4:   58-block  0
+        4:   59:    destroyRawMaterial(r->elements[i]);
+        4:   59-block  0
+call    0 returned 4
+        8:   60:    for (; i < r->dimension - 1; i++){
+        4:   60-block  0
+        8:   60-block  1
+branch  0 taken 4
+branch  1 taken 4 (fallthrough)
+        4:   61:        r->elements[i] = r->elements[i + 1];
+        -:   62:    }
+        4:   63:    r->elements[i] = NULL;
+        4:   64:    r->dimension--;
+        4:   65:}
+        -:   66:
+function getCopyRepo called 4 returned 100% blocks executed 100%
+        4:   67:Repo* getCopyRepo(Repo* r){
+        4:   67-block  0
+        4:   68:    Repo* cr = createRepo();
+        4:   68-block  0
+call    0 returned 4
+        4:   69:    cr->dimension = r->dimension;
+        4:   70:    cr->capacity = r->capacity;
+        4:   71:    free(cr->elements);
+        4:   72:    cr->elements = malloc(sizeof(RawMaterial*) * r->capacity);
+       16:   73:    for (int i = 0;i < r->dimension;i++){
+       16:   73-block  0
+branch  0 taken 12
+branch  1 taken 4 (fallthrough)
+       12:   74:        cr->elements[i] = copyRawMaterial(r->elements[i]);
+       12:   74-block  0
+call    0 returned 12
+        -:   75:    }
+        4:   76:    return cr;
+        4:   76-block  0
+        -:   77:}
+        -:   78:
+        -:   79:/*
+        -:   80: * Return a material care se afla pe pozitia i.
+        -:   81: */
+function get called 28 returned 100% blocks executed 100%
+       28:   82:Entity get(Repo* r, int i) {
+       28:   82-block  0
+       28:   83:    return r->elements[i];
+       28:   83-block  0
+        -:   84:}
+        -:   85:
+function set called 12 returned 100% blocks executed 100%
+       12:   86:Entity set(Repo* s, int poz, Entity e) {
+       12:   86-block  0
+       12:   87:    Entity rez = s->elements[poz];
+       12:   88:    s->elements[poz] = e;
+       12:   89:    return rez;
+       12:   89-block  0
+        -:   90:
+        -:   91:}
+        -:   92:
+        -:   93:
+        -:   94:
+        -:   95:

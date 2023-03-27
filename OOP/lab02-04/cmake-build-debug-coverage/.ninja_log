@@ -1,0 +1,9 @@
+# ninja log v5
+691	1043	7009417225749883	CMakeFiles/lab02_04.dir/validator.c.obj	cd5f83610a1c95fc
+3	565	7009446975142895	CMakeFiles/lab02_04.dir/main.c.obj	f45cb8aada4478fd
+4	491	7009426780684322	CMakeFiles/lab02_04.dir/UI/ui.c.obj	6032043418162455
+84	795	7009417223114201	CMakeFiles/lab02_04.dir/repo/repo.c.obj	235c0eed021dc8fe
+141	913	7009417224390565	CMakeFiles/lab02_04.dir/service/service.c.obj	2e2c7787418b99b4
+10	820	7009417223381470	CMakeFiles/lab02_04.dir/domain/RawMaterial.c.obj	910b6f50aff644b8
+63	877	7009417223918895	CMakeFiles/lab02_04.dir/teste/teste.c.obj	aa3bc92c9788ea1b
+566	936	7009446978785085	lab02_04.exe	c913d69cebd94cdc

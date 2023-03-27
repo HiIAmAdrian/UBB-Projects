@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="lab02_04"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lab02_04">
+				<Option output="/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/lab02_04" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 lab02_04"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lab02_04/fast">
+				<Option output="/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/lab02_04" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 lab02_04/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/mnt/c/Users/astan/Desktop/OOP/lab02-04/cmake-build-debug-coverage/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/mnt/c/Users/astan/Desktop/OOP/lab02-04/UI/ui.c">
+			<Option target="lab02_04"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/astan/Desktop/OOP/lab02-04/UI/ui.h">
+			<Option target="lab02_04"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/astan/Desktop/OOP/lab02-04/domain/RawMaterial.c">
+			<Option target="lab02_04"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/astan/Desktop/OOP/lab02-04/domain/RawMaterial.h">
+			<Option target="lab02_04"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/astan/Desktop/OOP/lab02-04/main.c">
+			<Option target="lab02_04"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/astan/Desktop/OOP/lab02-04/repo/repo.c">
+			<Option target="lab02_04"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/astan/Desktop/OOP/lab02-04/repo/repo.h">
+			<Option target="lab02_04"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/astan/Desktop/OOP/lab02-04/service/service.c">
+			<Option target="lab02_04"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/astan/Desktop/OOP/lab02-04/service/service.h">
+			<Option target="lab02_04"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/astan/Desktop/OOP/lab02-04/teste/teste.c">
+			<Option target="lab02_04"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/astan/Desktop/OOP/lab02-04/teste/teste.h">
+			<Option target="lab02_04"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/astan/Desktop/OOP/lab02-04/validator.c">
+			<Option target="lab02_04"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/astan/Desktop/OOP/lab02-04/validator.h">
+			<Option target="lab02_04"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/astan/Desktop/OOP/lab02-04/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
