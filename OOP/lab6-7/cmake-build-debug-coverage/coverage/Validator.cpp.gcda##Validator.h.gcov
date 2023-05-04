@@ -1,0 +1,45 @@
+        -:    0:Source:/mnt/c/Users/astan/Desktop/OOP/lab6-7/domain/Validator.h
+        -:    0:Graph:/mnt/c/Users/astan/Desktop/OOP/lab6-7/cmake-build-debug-coverage/CMakeFiles/lab6_7.dir/domain/Validator.cpp.gcno
+        -:    0:Data:/mnt/c/Users/astan/Desktop/OOP/lab6-7/cmake-build-debug-coverage/CMakeFiles/lab6_7.dir/domain/Validator.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by astan on 5/3/2023.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef LAB6_7_VALIDATOR_H
+        -:    6:#define LAB6_7_VALIDATOR_H
+        -:    7:#include "../domain/Masina.h"
+        -:    8:#include <utility>
+        -:    9:#include <vector>
+        -:   10:#include <string>
+        -:   11:#include <iostream>
+        -:   12:
+        -:   13:using namespace std;
+        -:   14:
+        -:   15:class Validator {
+        -:   16:public:
+        -:   17:    static void validation(const Masina& m);
+        -:   18:};
+        -:   19:
+        -:   20:class ValidationException : exception{
+        -:   21:private:
+        -:   22:    vector<string> message;
+        -:   23:public:
+function _ZN19ValidationExceptionC2ESt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS6_EE called 4 returned 100% blocks executed 100%
+        4:   24:    explicit ValidationException(vector<string> message):message{std::move(message)}{}
+        4:   24-block  0
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+        -:   25:    friend ostream& operator<<(ostream& os, const ValidationException& ex);
+function _ZNK19ValidationException10getMessageB5cxx11Ev called 0 returned 0% blocks executed 0%
+    #####:   26:    [[nodiscard]] vector<string> getMessage() const{
+    #####:   27:        return message;
+    %%%%%:   27-block  0
+call    0 never executed
+        -:   28:    };
+        -:   29:};
+        -:   30:
+        -:   31:ostream& operator<<(ostream& os, const ValidationException& ex);
+        -:   32:
+        -:   33:#endif //LAB6_7_VALIDATOR_H

@@ -1,0 +1,133 @@
+        -:    0:Source:/mnt/c/Users/astan/Desktop/OOP/lab6-7/service/Service.cpp
+        -:    0:Graph:/mnt/c/Users/astan/Desktop/OOP/lab6-7/cmake-build-debug-coverage/CMakeFiles/lab6_7.dir/service/Service.cpp.gcno
+        -:    0:Data:/mnt/c/Users/astan/Desktop/OOP/lab6-7/cmake-build-debug-coverage/CMakeFiles/lab6_7.dir/service/Service.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by astan on 4/3/2023.
+        -:    3://
+        -:    4:
+        -:    5:#include "Service.h"
+        -:    6:
+        -:    7:#include <utility>
+        -:    8:#include <iostream>
+function _ZN7ServiceC2ER4Repo called 5 returned 100% blocks executed 100%
+        5:    9:Service::Service(Repo &repo1) : repo(repo1) {}
+        -:   10:
+function _ZN7Service9addToListEiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_S5_ called 15 returned 67% blocks executed 62%
+       15:   11:void Service::addToList(int nrInmatriculare, std::string producator, std::string model, std::string tip) {
+       30:   12:    Elemtype e = Masina(nrInmatriculare, std::move(producator), std::move(model), std::move(tip));
+       15:   12-block  0
+call    0 returned 15
+call    1 returned 15
+call    2 returned 15
+call    3 returned 15
+call    4 returned 15
+call    5 returned 15
+call    6 returned 15
+branch  7 taken 15 (fallthrough)
+branch  8 taken 0 (throw)
+call    9 returned 15
+call   10 returned 15
+    $$$$$:   12-block  1
+    $$$$$:   12-block  2
+    $$$$$:   12-block  3
+       15:   13:    Validator::validation(e);
+call    0 returned 15
+branch  1 taken 11 (fallthrough)
+branch  2 taken 4 (throw)
+       11:   14:    if (repo.exist(e)){
+       11:   14-block  0
+call    0 returned 11
+branch  1 taken 11 (fallthrough)
+branch  2 taken 0 (throw)
+       11:   14-block  1
+call    3 returned 11
+branch  4 taken 11 (fallthrough)
+branch  5 taken 0 (throw)
+       11:   14-block  2
+call    6 returned 11
+branch  7 taken 1 (fallthrough)
+branch  8 taken 10
+    $$$$$:   14-block  3
+call    9 never executed
+    $$$$$:   14-block  4
+        1:   15:        throw RepoException("Elementul deja exista!");
+        1:   15-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:   15-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   15-block  2
+call    9 never executed
+    $$$$$:   15-block  3
+    $$$$$:   15-block  4
+call   10 never executed
+        -:   16:    }
+        -:   17:    else{
+       10:   18:        repo.addToRepo(e);
+       10:   18-block  0
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   19:    }
+       15:   20:}
+       10:   20-block  0
+call    0 returned 10
+        5:   20-block  1
+call    1 returned 5
+        -:   21:
+function _ZNK7Service7getListEv called 8 returned 100% blocks executed 100%
+        8:   22:const VectorDinamic<Elemtype>& Service::getList() const{
+        8:   23:    return repo.getList();
+        8:   23-block  0
+call    0 returned 8
+        -:   24:}
+        -:   25:
+function _ZN7Service13deleteElementEi called 2 returned 50% blocks executed 100%
+        2:   26:void Service::deleteElement(int nrInmatriculare) {
+        2:   27:    repo.deleteFromRepo(nrInmatriculare);
+        2:   27-block  0
+call    0 returned 1
+        1:   28:}
+        -:   29:
+function _ZN7Service13modifyElementEiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_S5_ called 2 returned 50% blocks executed 62%
+        2:   30:void Service::modifyElement(int nrInmatriculare, std::string producator, std::string model, std::string tip) {
+        2:   31:    repo.deleteFromRepo(nrInmatriculare);
+        2:   31-block  0
+call    0 returned 1
+        1:   32:    addToList(nrInmatriculare,std::move(producator),std::move(model),std::move(tip));
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   32-block  0
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+    $$$$$:   32-block  1
+call   12 never executed
+    $$$$$:   32-block  2
+    $$$$$:   32-block  3
+call   13 never executed
+    $$$$$:   32-block  4
+    $$$$$:   32-block  5
+call   14 never executed
+        1:   33:}
+        -:   34:
+function _ZN7Service13searchElementEi called 3 returned 33% blocks executed 100%
+        3:   35:Elemtype Service::searchElement(int nrInmatriculare) {
+        3:   36:    return repo.searchElement(nrInmatriculare);
+        3:   36-block  0
+call    0 returned 1
+        -:   37:}

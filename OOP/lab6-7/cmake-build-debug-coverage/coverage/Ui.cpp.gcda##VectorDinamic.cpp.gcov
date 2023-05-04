@@ -1,0 +1,141 @@
+        -:    0:Source:/mnt/c/Users/astan/Desktop/OOP/lab6-7/domain/VectorDinamic.cpp
+        -:    0:Graph:/mnt/c/Users/astan/Desktop/OOP/lab6-7/cmake-build-debug-coverage/CMakeFiles/lab6_7.dir/ui/Ui.cpp.gcno
+        -:    0:Data:/mnt/c/Users/astan/Desktop/OOP/lab6-7/cmake-build-debug-coverage/CMakeFiles/lab6_7.dir/ui/Ui.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "VectorDinamic.h"
+        -:    2:#include <iostream>
+        -:    3:using namespace std;
+        -:    4:template<typename T> void VectorDinamic<T>::redim() {
+        -:    5:
+        -:    6:    //alocam un spatiu de capacitate dubla
+        -:    7:    T *eNou = new T[2 * cp];
+        -:    8:
+        -:    9:    //copiem vechile valori in noua zona
+        -:   10:    for (int i = 0; i < n; i++)
+        -:   11:        eNou[i] = e[i];
+        -:   12:
+        -:   13:    //dublam capacitatea
+        -:   14:    cp = 2 * cp;
+        -:   15:
+        -:   16:    //eliberam vechea zona
+        -:   17:    delete[] e;
+        -:   18:
+        -:   19:    //vectorul indica spre noua zona
+        -:   20:    e = eNou;
+        -:   21:}
+        -:   22:
+        -:   23:template<typename T> void VectorDinamic<T>::modificaElement(int i, T newVal) {
+        -:   24:    e[i] = newVal;
+        -:   25:}
+        -:   26:
+        -:   27:template<typename T> VectorDinamic<T>::VectorDinamic(int cp) {
+        -:   28:    //setam capacitatea
+        -:   29:    this->cp = cp;
+        -:   30:
+        -:   31:    //alocam spatiu de memorare pentru vector
+        -:   32:    e = new T[cp];
+        -:   33:
+        -:   34:    //setam numarul de elemente
+        -:   35:    this->n = 0;
+        -:   36:}
+        -:   37:
+        -:   38:template<typename T> VectorDinamic<T>::~VectorDinamic() {
+        -:   39:    //eliberam zona de memorare alocata vectorului
+        -:   40:    delete[] e;
+        -:   41:}
+        -:   42:
+function _ZNK13VectorDinamicI6MasinaE3dimEv called 0 returned 0% blocks executed 0%
+    #####:   43:template<typename T> int VectorDinamic<T>::dim() const{
+    #####:   44:    return n;
+    %%%%%:   44-block  0
+        -:   45:}
+        -:   46:
+function _ZNK13VectorDinamicI6MasinaE7elementEi called 0 returned 0% blocks executed 0%
+    #####:   47:template<typename T> T VectorDinamic<T>::element(int i) const{
+    #####:   48:    return e[i];
+    %%%%%:   48-block  0
+call    0 never executed
+        -:   49:}
+        -:   50:
+        -:   51:template<typename T> void VectorDinamic<T>::adaugaSfarsit(T elem) {
+        -:   52:    //daca s-a atins capacitatea maxima, redimensionam
+        -:   53:    if (n == cp)
+        -:   54:        redim();
+        -:   55:
+        -:   56:    //adaugam la sfarsit
+        -:   57:    this->e[n++] = elem;
+        -:   58:}
+        -:   59:
+        -:   60:template<typename T> void VectorDinamic<T>::stergeElement(Iterator<T> it){
+        -:   61:    int i = it.getCurent();
+        -:   62:    for (; i < n - 1;i++){
+        -:   63:        this->e[i] = this->e[i + 1];
+        -:   64:    }
+        -:   65:    n--;
+        -:   66:}
+        -:   67:
+        -:   68:template<typename T>
+        -:   69:Iterator<T> VectorDinamic<T>::iterator(int index) {
+        -:   70:    //returnam un iterator pe vector
+        -:   71:    return Iterator<T>(*this, index);
+        -:   72:}
+        -:   73:
+        -:   74:template <typename T>
+        -:   75:Iterator<T>::Iterator(const VectorDinamic<T>& collection, int index) : index(index), collection(collection) {}
+        -:   76:
+        -:   77:template <typename T>
+        -:   78:bool Iterator<T>::operator!=(const Iterator<T> & other) const {
+        -:   79:    return index != other.index;
+        -:   80:}
+        -:   81:
+        -:   82:template <typename T>
+        -:   83:T const & Iterator<T>::operator*() const{
+        -:   84:
+        -:   85:    return collection.element(index);
+        -:   86:}
+        -:   87:
+        -:   88:template <typename T>
+        -:   89:Iterator<T> const & Iterator<T>::operator++(){
+        -:   90:    ++index;
+        -:   91:    return *this;
+        -:   92:}
+        -:   93:
+        -:   94:template <typename T>
+        -:   95:inline Iterator<T> begin(VectorDinamic<T> const & collection){
+        -:   96:    return Iterator<T>(collection, 0);
+        -:   97:}
+        -:   98:
+        -:   99:template <typename T>
+        -:  100:inline Iterator<T> end(VectorDinamic<T> const & collection){
+        -:  101:    return Iterator<T>(collection, collection.dim());
+        -:  102:}
+        -:  103:
+        -:  104:template <typename T>
+        -:  105:void Iterator<T>::prim() {
+        -:  106:    //seteaza iteratorul pe prima pozitie din vector
+        -:  107:    index = 0;
+        -:  108:}
+        -:  109:
+        -:  110:template <typename T>
+        -:  111:int Iterator<T>::getCurent() {
+        -:  112:    return index;
+        -:  113:}
+        -:  114:
+        -:  115:template <typename T>
+        -:  116:bool Iterator<T>::valid() const{
+        -:  117:    //verifica daca iteratorul indica spre un element al vectorului
+        -:  118:    return index < collection.dim();
+        -:  119:}
+        -:  120:
+        -:  121:template <typename T>
+        -:  122:T Iterator<T>::element() const{
+        -:  123:    //elementul curent
+        -:  124:    return collection.e[index];
+        -:  125:}
+        -:  126:
+        -:  127:
+        -:  128:template <typename T>
+        -:  129:void Iterator<T>::urmator() {
+        -:  130:    //pentru ambele variante
+        -:  131:    index++;
+        -:  132:}

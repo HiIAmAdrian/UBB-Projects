@@ -1,0 +1,1365 @@
+        -:    0:Source:/mnt/c/Users/astan/Desktop/OOP/lab6-7/teste/teste.cpp
+        -:    0:Graph:/mnt/c/Users/astan/Desktop/OOP/lab6-7/cmake-build-debug-coverage/CMakeFiles/lab6_7.dir/teste/teste.cpp.gcno
+        -:    0:Data:/mnt/c/Users/astan/Desktop/OOP/lab6-7/cmake-build-debug-coverage/CMakeFiles/lab6_7.dir/teste/teste.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by astan on 4/3/2023.
+        -:    3://
+        -:    4:#include "teste.h"
+        -:    5:#include "../service/Service.h"
+        -:    6:#include <cstring>
+        -:    7:
+function _Z8test_addv called 1 returned 100% blocks executed 55%
+        1:    8:void test_add(){
+        1:    9:    Repo repo = Repo();
+        1:    9-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   10:    Service service = Service(repo);
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   11:
+        1:   12:    service.addToList(1, "Toyota", "lolo", "th");
+        1:   12-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   12-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   12-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   12-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   12-block  4
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:   12-block  5
+call   21 never executed
+    $$$$$:   12-block  6
+    $$$$$:   12-block  7
+call   22 never executed
+    $$$$$:   12-block  8
+    $$$$$:   12-block  9
+call   23 never executed
+    $$$$$:   12-block 10
+    $$$$$:   12-block 11
+call   24 never executed
+    $$$$$:   12-block 12
+    $$$$$:   12-block 13
+call   25 never executed
+    $$$$$:   12-block 14
+    $$$$$:   12-block 15
+call   26 never executed
+    $$$$$:   12-block 16
+        1:   13:    service.addToList(2, "Mercedes", "lodlo", "tdh");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   13-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   13-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   13-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   13-block  3
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:   13-block  4
+call   21 never executed
+    $$$$$:   13-block  5
+    $$$$$:   13-block  6
+call   22 never executed
+    $$$$$:   13-block  7
+    $$$$$:   13-block  8
+call   23 never executed
+    $$$$$:   13-block  9
+    $$$$$:   13-block 10
+call   24 never executed
+    $$$$$:   13-block 11
+    $$$$$:   13-block 12
+call   25 never executed
+    $$$$$:   13-block 13
+    $$$$$:   13-block 14
+call   26 never executed
+    $$$$$:   13-block 15
+        1:   14:    service.addToList(3, "Toyota", "lolo", "th");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   14-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   14-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   14-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   14-block  3
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:   14-block  4
+call   21 never executed
+    $$$$$:   14-block  5
+    $$$$$:   14-block  6
+call   22 never executed
+    $$$$$:   14-block  7
+    $$$$$:   14-block  8
+call   23 never executed
+    $$$$$:   14-block  9
+    $$$$$:   14-block 10
+call   24 never executed
+    $$$$$:   14-block 11
+    $$$$$:   14-block 12
+call   25 never executed
+    $$$$$:   14-block 13
+    $$$$$:   14-block 14
+call   26 never executed
+    $$$$$:   14-block 15
+        -:   15:
+        -:   16:    try {
+       7*:   17:        service.addToList(2, "Mercedes", "lodlo", "tdh");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   17-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   17-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   17-block  2
+call   12 returned 1
+branch 13 taken 0 (fallthrough)
+branch 14 taken 1 (throw)
+    %%%%%:   17-block  3
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+        1:   17-block  4
+call   21 returned 1
+        1:   17-block  5
+        1:   17-block  6
+call   22 returned 1
+        1:   17-block  7
+        1:   17-block  8
+call   23 returned 1
+        1:   17-block  9
+        1:   17-block 10
+call   24 returned 1
+        1:   17-block 11
+        1:   17-block 12
+call   25 returned 1
+        1:   17-block 13
+        1:   17-block 14
+call   26 returned 1
+        1:   17-block 15
+    #####:   18:        assert(false);
+call    0 never executed
+        1:   19:    }catch(RepoException& ex){
+        1:   19-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   19-block  1
+call    2 returned 1
+        -:   20:        assert(true);
+        1:   21:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   22:    assert(service.getList().element(0).getNrInmatriculare() == 1);
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   22-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   22-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   22-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    $$$$$:   22-block  4
+call   11 never executed
+        1:   22-block  5
+call   12 returned 1
+    $$$$$:   22-block  6
+call   13 never executed
+    $$$$$:   22-block  7
+        1:   23:    assert(service.getList().element(1).getModel() == "lodlo");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   23-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   23-block  2
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    $$$$$:   23-block  3
+call   12 never executed
+        1:   23-block  4
+call   13 returned 1
+call   14 returned 1
+    $$$$$:   23-block  5
+call   15 never executed
+    $$$$$:   23-block  6
+        1:   24:    assert(service.getList().element(1).getProducator() == "Mercedes");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   24-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   24-block  2
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    $$$$$:   24-block  3
+call   12 never executed
+        1:   24-block  4
+call   13 returned 1
+call   14 returned 1
+    $$$$$:   24-block  5
+call   15 never executed
+    $$$$$:   24-block  6
+        1:   25:    assert(service.getList().element(1).getTip() == "tdh");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   25-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   25-block  2
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    $$$$$:   25-block  3
+call   12 never executed
+        1:   25-block  4
+call   13 returned 1
+call   14 returned 1
+    $$$$$:   25-block  5
+call   15 never executed
+    $$$$$:   25-block  6
+        1:   26:    assert(service.getList().dim() == 3);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:   26-block  1
+call    6 never executed
+        1:   27:}
+        1:   27-block  0
+call    0 returned 1
+    $$$$$:   27-block  1
+call    1 never executed
+        -:   28:
+function _Z15test_validationv called 1 returned 100% blocks executed 77%
+        1:   29:void test_validation(){
+        1:   30:    Repo repo = Repo();
+        1:   30-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   31:    Service service = Service(repo);
+        1:   31-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   32:
+        -:   33:    try{
+       1*:   34:        service.searchElement(0);
+        1:   34-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    %%%%%:   34-block  1
+call    3 never executed
+    #####:   35:        assert(false);
+call    0 never executed
+        1:   36:    } catch(RepoException& ex){
+        1:   36-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   36-block  1
+call    2 returned 1
+        -:   37:        assert(true);
+        1:   38:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   39:
+        -:   40:    try{
+        7:   41:        service.addToList(-2, "Toyota", "lolo", "th");
+        1:   41-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   41-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   41-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   41-block  3
+call   12 returned 1
+branch 13 taken 0 (fallthrough)
+branch 14 taken 1 (throw)
+    $$$$$:   41-block  4
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+        1:   41-block  5
+call   21 returned 1
+        1:   41-block  6
+        1:   41-block  7
+call   22 returned 1
+        1:   41-block  8
+        1:   41-block  9
+call   23 returned 1
+        1:   41-block 10
+        1:   41-block 11
+call   24 returned 1
+        1:   41-block 12
+        1:   41-block 13
+call   25 returned 1
+        1:   41-block 14
+        1:   41-block 15
+call   26 returned 1
+        1:   41-block 16
+    =====:   42:        assert(false);
+call    0 never executed
+        1:   43:    }catch(ValidationException& ex){
+        1:   43-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   43-block  1
+call    2 returned 1
+        -:   44:        assert(true);
+        1:   45:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   46:    try{
+        7:   47:        service.addToList(1, "", "lolo", "th");
+        1:   47-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   47-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   47-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   47-block  3
+call   12 returned 1
+branch 13 taken 0 (fallthrough)
+branch 14 taken 1 (throw)
+    $$$$$:   47-block  4
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+        1:   47-block  5
+call   21 returned 1
+        1:   47-block  6
+        1:   47-block  7
+call   22 returned 1
+        1:   47-block  8
+        1:   47-block  9
+call   23 returned 1
+        1:   47-block 10
+        1:   47-block 11
+call   24 returned 1
+        1:   47-block 12
+        1:   47-block 13
+call   25 returned 1
+        1:   47-block 14
+        1:   47-block 15
+call   26 returned 1
+        1:   47-block 16
+    =====:   48:        assert(false);
+call    0 never executed
+        1:   49:    }catch(ValidationException& ex){
+        1:   49-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   49-block  1
+call    2 returned 1
+        -:   50:        assert(true);
+        1:   51:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   52:    try{
+        7:   53:        service.addToList(1, "Toyota", "", "th");
+        1:   53-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   53-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   53-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   53-block  3
+call   12 returned 1
+branch 13 taken 0 (fallthrough)
+branch 14 taken 1 (throw)
+    $$$$$:   53-block  4
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+        1:   53-block  5
+call   21 returned 1
+        1:   53-block  6
+        1:   53-block  7
+call   22 returned 1
+        1:   53-block  8
+        1:   53-block  9
+call   23 returned 1
+        1:   53-block 10
+        1:   53-block 11
+call   24 returned 1
+        1:   53-block 12
+        1:   53-block 13
+call   25 returned 1
+        1:   53-block 14
+        1:   53-block 15
+call   26 returned 1
+        1:   53-block 16
+    =====:   54:        assert(false);
+call    0 never executed
+        1:   55:    }catch(ValidationException& ex){
+        1:   55-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   55-block  1
+call    2 returned 1
+        -:   56:        assert(true);
+        1:   57:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   58:    try{
+        7:   59:        service.addToList(1, "Toyota", "lolo", "");
+        1:   59-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   59-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   59-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   59-block  3
+call   12 returned 1
+branch 13 taken 0 (fallthrough)
+branch 14 taken 1 (throw)
+    $$$$$:   59-block  4
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+        1:   59-block  5
+call   21 returned 1
+        1:   59-block  6
+        1:   59-block  7
+call   22 returned 1
+        1:   59-block  8
+        1:   59-block  9
+call   23 returned 1
+        1:   59-block 10
+        1:   59-block 11
+call   24 returned 1
+        1:   59-block 12
+        1:   59-block 13
+call   25 returned 1
+        1:   59-block 14
+        1:   59-block 15
+call   26 returned 1
+        1:   59-block 16
+    =====:   60:        assert(false);
+call    0 never executed
+        1:   61:    }catch(ValidationException& ex){
+        1:   61-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   61-block  1
+call    2 returned 1
+        -:   62:        assert(true);
+        1:   63:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   64:    assert(service.getList().dim() == 0);
+        1:   64-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   64-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:   64-block  2
+call    6 never executed
+        1:   65:}
+        1:   65-block  0
+call    0 returned 1
+    $$$$$:   65-block  1
+call    1 never executed
+        -:   66:
+function _Z11test_deletev called 1 returned 100% blocks executed 49%
+        1:   67:void test_delete(){
+        1:   68:    Repo repo = Repo();
+        1:   68-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   69:    Service service = Service(repo);
+        1:   69-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   70:    service.addToList(1, "Toyota", "lolo", "th");
+        1:   70-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   70-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   70-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   70-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   70-block  4
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:   70-block  5
+call   21 never executed
+    $$$$$:   70-block  6
+    $$$$$:   70-block  7
+call   22 never executed
+    $$$$$:   70-block  8
+    $$$$$:   70-block  9
+call   23 never executed
+    $$$$$:   70-block 10
+    $$$$$:   70-block 11
+call   24 never executed
+    $$$$$:   70-block 12
+    $$$$$:   70-block 13
+call   25 never executed
+    $$$$$:   70-block 14
+    $$$$$:   70-block 15
+call   26 never executed
+    $$$$$:   70-block 16
+        1:   71:    service.addToList(2, "Mercedes", "lodlo", "tdh");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   71-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   71-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   71-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   71-block  3
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:   71-block  4
+call   21 never executed
+    $$$$$:   71-block  5
+    $$$$$:   71-block  6
+call   22 never executed
+    $$$$$:   71-block  7
+    $$$$$:   71-block  8
+call   23 never executed
+    $$$$$:   71-block  9
+    $$$$$:   71-block 10
+call   24 never executed
+    $$$$$:   71-block 11
+    $$$$$:   71-block 12
+call   25 never executed
+    $$$$$:   71-block 13
+    $$$$$:   71-block 14
+call   26 never executed
+    $$$$$:   71-block 15
+        1:   72:    service.deleteElement(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   73:    try{
+        1:   74:        service.deleteElement(2);
+        1:   74-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    #####:   75:        assert(false);
+    %%%%%:   75-block  0
+call    0 never executed
+        -:   76:    }
+        1:   77:    catch(RepoException& ex){
+        1:   77-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   77-block  1
+call    2 returned 1
+        -:   78:        assert(true);
+        1:   79:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   80:
+        1:   81:    assert(service.getList().dim() == 1);
+        1:   81-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   81-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:   81-block  2
+call    6 never executed
+        -:   82:
+        1:   83:}
+        1:   83-block  0
+call    0 returned 1
+    $$$$$:   83-block  1
+call    1 never executed
+        -:   84:
+function _Z11test_domainv called 1 returned 100% blocks executed 56%
+        1:   85:void test_domain(){
+        1:   86:    Masina m;
+        1:   86-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   87:    Masina masina = Masina(1, "Toyota", "lolo", "th");
+        1:   87-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   87-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   87-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   87-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   87-block  4
+    $$$$$:   87-block  5
+    $$$$$:   87-block  6
+    $$$$$:   87-block  7
+    $$$$$:   87-block  8
+    $$$$$:   87-block  9
+        1:   88:    masina.setNrInmatriculare(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   89:    masina.setModel("abc");
+        1:   89-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   89-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   89-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   89-block  3
+call    9 never executed
+    $$$$$:   89-block  4
+    $$$$$:   89-block  5
+call   10 never executed
+    $$$$$:   89-block  6
+        1:   90:    masina.setProducator("abc");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   90-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   90-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   90-block  2
+call    9 never executed
+    $$$$$:   90-block  3
+    $$$$$:   90-block  4
+call   10 never executed
+    $$$$$:   90-block  5
+        1:   91:    masina.setTip("abc");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   91-block  0
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   91-block  1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   91-block  2
+call    9 never executed
+    $$$$$:   91-block  3
+    $$$$$:   91-block  4
+call   10 never executed
+    $$$$$:   91-block  5
+       1*:   92:    assert(masina.getTip() == "abc");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   92-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   92-block  1
+call    6 never executed
+        1:   92-block  2
+call    7 returned 1
+       1*:   93:    assert(masina.getProducator() == "abc");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   93-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   93-block  1
+call    6 never executed
+        1:   93-block  2
+call    7 returned 1
+       1*:   94:    assert(masina.getNrInmatriculare() == 2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   94-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   94-block  1
+call    5 never executed
+       1*:   95:    assert(masina.getModel() == "abc");
+        1:   95-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   95-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   95-block  2
+call    6 never executed
+        1:   95-block  3
+call    7 returned 1
+        -:   96:
+        1:   97:    Masina masina2 = masina;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   98:    assert(masina2.getTip() == "abc");
+        1:   98-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   98-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   98-block  2
+call    6 never executed
+        1:   98-block  3
+call    7 returned 1
+       1*:   99:    assert(masina2.getProducator() == "abc");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   99-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   99-block  1
+call    6 never executed
+        1:   99-block  2
+call    7 returned 1
+       1*:  100:    assert(masina2.getNrInmatriculare() == 2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  100-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  100-block  1
+call    5 never executed
+       1*:  101:    assert(masina2.getModel() == "abc");
+        1:  101-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  101-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  101-block  2
+call    6 never executed
+        1:  101-block  3
+call    7 returned 1
+        1:  102:}
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:  102-block  0
+call    3 never executed
+    $$$$$:  102-block  1
+call    4 never executed
+    $$$$$:  102-block  2
+call    5 never executed
+        -:  103:
+function _Z11test_modifyv called 1 returned 100% blocks executed 54%
+        1:  104:void test_modify(){
+        1:  105:    Repo repo = Repo();
+        1:  105-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  106:    Service service = Service(repo);
+        1:  106-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  107:    service.addToList(1, "Toyota", "lolo", "th");
+        1:  107-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  107-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  107-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  107-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  107-block  4
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:  107-block  5
+call   21 never executed
+    $$$$$:  107-block  6
+    $$$$$:  107-block  7
+call   22 never executed
+    $$$$$:  107-block  8
+    $$$$$:  107-block  9
+call   23 never executed
+    $$$$$:  107-block 10
+    $$$$$:  107-block 11
+call   24 never executed
+    $$$$$:  107-block 12
+    $$$$$:  107-block 13
+call   25 never executed
+    $$$$$:  107-block 14
+    $$$$$:  107-block 15
+call   26 never executed
+    $$$$$:  107-block 16
+        1:  108:    service.addToList(2, "Mercedes", "lodlo", "tdh");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  108-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  108-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  108-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  108-block  3
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:  108-block  4
+call   21 never executed
+    $$$$$:  108-block  5
+    $$$$$:  108-block  6
+call   22 never executed
+    $$$$$:  108-block  7
+    $$$$$:  108-block  8
+call   23 never executed
+    $$$$$:  108-block  9
+    $$$$$:  108-block 10
+call   24 never executed
+    $$$$$:  108-block 11
+    $$$$$:  108-block 12
+call   25 never executed
+    $$$$$:  108-block 13
+    $$$$$:  108-block 14
+call   26 never executed
+    $$$$$:  108-block 15
+        -:  109:
+        1:  110:    service.modifyElement(2, "abc", "abc", "abc");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  110-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  110-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  110-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  110-block  3
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:  110-block  4
+call   21 never executed
+    $$$$$:  110-block  5
+    $$$$$:  110-block  6
+call   22 never executed
+    $$$$$:  110-block  7
+    $$$$$:  110-block  8
+call   23 never executed
+    $$$$$:  110-block  9
+    $$$$$:  110-block 10
+call   24 never executed
+    $$$$$:  110-block 11
+    $$$$$:  110-block 12
+call   25 never executed
+    $$$$$:  110-block 13
+    $$$$$:  110-block 14
+call   26 never executed
+    $$$$$:  110-block 15
+       1*:  111:    assert(service.getList().element(1).getProducator() == "abc");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  111-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  111-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  111-block  2
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:  111-block  3
+call   12 never executed
+        1:  111-block  4
+call   13 returned 1
+call   14 returned 1
+    $$$$$:  111-block  5
+call   15 never executed
+    $$$$$:  111-block  6
+        -:  112:    try{
+       7*:  113:        service.modifyElement(3, "a", "a", "a");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  113-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  113-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  113-block  2
+call   12 returned 1
+branch 13 taken 0 (fallthrough)
+branch 14 taken 1 (throw)
+    %%%%%:  113-block  3
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+call   19 never executed
+call   20 never executed
+        1:  113-block  4
+call   21 returned 1
+        1:  113-block  5
+        1:  113-block  6
+call   22 returned 1
+        1:  113-block  7
+        1:  113-block  8
+call   23 returned 1
+        1:  113-block  9
+        1:  113-block 10
+call   24 returned 1
+        1:  113-block 11
+        1:  113-block 12
+call   25 returned 1
+        1:  113-block 13
+        1:  113-block 14
+call   26 returned 1
+        1:  113-block 15
+    #####:  114:        assert(false);
+call    0 never executed
+        -:  115:    }
+        1:  116:    catch(RepoException& ex){
+        1:  116-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  116-block  1
+call    2 returned 1
+        -:  117:        assert(true);
+        1:  118:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  119:}
+        1:  119-block  0
+call    0 returned 1
+    $$$$$:  119-block  1
+call    1 never executed
+        -:  120:
+function _Z11test_searchv called 1 returned 100% blocks executed 48%
+        1:  121:void test_search(){
+        1:  122:    Repo repo = Repo();
+        1:  122-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  123:    Service service = Service(repo);
+        1:  123-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  124:    service.addToList(1, "Toyota", "lolo", "th");
+        1:  124-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  124-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  124-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  124-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  124-block  4
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:  124-block  5
+call   21 never executed
+    $$$$$:  124-block  6
+    $$$$$:  124-block  7
+call   22 never executed
+    $$$$$:  124-block  8
+    $$$$$:  124-block  9
+call   23 never executed
+    $$$$$:  124-block 10
+    $$$$$:  124-block 11
+call   24 never executed
+    $$$$$:  124-block 12
+    $$$$$:  124-block 13
+call   25 never executed
+    $$$$$:  124-block 14
+    $$$$$:  124-block 15
+call   26 never executed
+    $$$$$:  124-block 16
+        1:  125:    service.addToList(2, "Mercedes", "lodlo", "tdh");
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  125-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  125-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  125-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  125-block  3
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+    $$$$$:  125-block  4
+call   21 never executed
+    $$$$$:  125-block  5
+    $$$$$:  125-block  6
+call   22 never executed
+    $$$$$:  125-block  7
+    $$$$$:  125-block  8
+call   23 never executed
+    $$$$$:  125-block  9
+    $$$$$:  125-block 10
+call   24 never executed
+    $$$$$:  125-block 11
+    $$$$$:  125-block 12
+call   25 never executed
+    $$$$$:  125-block 13
+    $$$$$:  125-block 14
+call   26 never executed
+    $$$$$:  125-block 15
+        1:  126:    Masina m = service.searchElement(2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  127:    try{
+       1*:  128:        service.searchElement(5);
+        1:  128-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    %%%%%:  128-block  1
+call    3 never executed
+    #####:  129:        assert(false);
+call    0 never executed
+        -:  130:    }
+        1:  131:    catch(RepoException& ex){
+        1:  131-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  131-block  1
+call    2 returned 1
+        -:  132:        assert(true);
+        1:  133:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  134:    assert(m.getTip() == "tdh");
+        1:  134-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  134-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:  134-block  2
+call    6 never executed
+        1:  134-block  3
+call    7 returned 1
+        1:  135:}
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  135-block  0
+call    2 never executed
+    $$$$$:  135-block  1
+call    3 never executed
+        -:  136:
+function _Z8test_allv called 1 returned 100% blocks executed 100%
+        1:  137:void test_all(){
+        1:  138:    test_domain();
+        1:  138-block  0
+call    0 returned 1
+        1:  139:    test_add();
+call    0 returned 1
+        1:  140:    test_validation();
+call    0 returned 1
+        1:  141:    test_modify();
+call    0 returned 1
+        1:  142:    test_delete();
+call    0 returned 1
+        1:  143:    test_search();
+call    0 returned 1
+        1:  144:}

@@ -1,0 +1,239 @@
+        -:    0:Source:/mnt/c/Users/astan/Desktop/OOP/lab6-7/domain/VectorDinamic.cpp
+        -:    0:Graph:/mnt/c/Users/astan/Desktop/OOP/lab6-7/cmake-build-debug-coverage/CMakeFiles/lab6_7.dir/repo/Repo.cpp.gcno
+        -:    0:Data:/mnt/c/Users/astan/Desktop/OOP/lab6-7/cmake-build-debug-coverage/CMakeFiles/lab6_7.dir/repo/Repo.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "VectorDinamic.h"
+        -:    2:#include <iostream>
+        -:    3:using namespace std;
+function _ZN13VectorDinamicI6MasinaE5redimEv called 1 returned 100% blocks executed 64%
+        1:    4:template<typename T> void VectorDinamic<T>::redim() {
+        -:    5:
+        -:    6:    //alocam un spatiu de capacitate dubla
+       5*:    7:    T *eNou = new T[2 * cp];
+        1:    7-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:    7-block  1
+    %%%%%:    7-block  2
+        1:    7-block  3
+call    2 returned 1
+        4:    7-block  4
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:    7-block  5
+        5:    7-block  6
+branch  6 taken 4
+branch  7 taken 1 (fallthrough)
+    $$$$$:    7-block  7
+    $$$$$:    7-block  8
+call    8 never executed
+    $$$$$:    7-block  9
+branch  9 never executed
+branch 10 never executed
+    $$$$$:    7-block 10
+    $$$$$:    7-block 11
+    $$$$$:    7-block 12
+call   11 never executed
+        -:    8:
+        -:    9:    //copiem vechile valori in noua zona
+        3:   10:    for (int i = 0; i < n; i++)
+        1:   10-block  0
+        3:   10-block  1
+branch  0 taken 2
+branch  1 taken 1 (fallthrough)
+        2:   11:        eNou[i] = e[i];
+        2:   11-block  0
+call    0 returned 2
+        -:   12:
+        -:   13:    //dublam capacitatea
+        1:   14:    cp = 2 * cp;
+        -:   15:
+        -:   16:    //eliberam vechea zona
+        3:   17:    delete[] e;
+        1:   17-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   17-block  1
+        3:   17-block  2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 1
+        2:   17-block  3
+call    4 returned 2
+        1:   17-block  4
+call    5 returned 1
+        -:   18:
+        -:   19:    //vectorul indica spre noua zona
+        1:   20:    e = eNou;
+        1:   21:}
+        1:   21-block  0
+        -:   22:
+        -:   23:template<typename T> void VectorDinamic<T>::modificaElement(int i, T newVal) {
+        -:   24:    e[i] = newVal;
+        -:   25:}
+        -:   26:
+function _ZN13VectorDinamicI6MasinaEC2Ei called 5 returned 100% blocks executed 47%
+        5:   27:template<typename T> VectorDinamic<T>::VectorDinamic(int cp) {
+        -:   28:    //setam capacitatea
+        5:   29:    this->cp = cp;
+        -:   30:
+        -:   31:    //alocam spatiu de memorare pentru vector
+      15*:   32:    e = new T[cp];
+        5:   32-block  0
+branch  0 taken 5 (fallthrough)
+branch  1 taken 0
+        5:   32-block  1
+    %%%%%:   32-block  2
+        5:   32-block  3
+call    2 returned 5
+       10:   32-block  4
+call    3 returned 10
+branch  4 taken 10 (fallthrough)
+branch  5 taken 0 (throw)
+       10:   32-block  5
+       15:   32-block  6
+branch  6 taken 10
+branch  7 taken 5 (fallthrough)
+    $$$$$:   32-block  7
+    $$$$$:   32-block  8
+call    8 never executed
+    $$$$$:   32-block  9
+branch  9 never executed
+branch 10 never executed
+    $$$$$:   32-block 10
+    $$$$$:   32-block 11
+    $$$$$:   32-block 12
+call   11 never executed
+        -:   33:
+        -:   34:    //setam numarul de elemente
+        5:   35:    this->n = 0;
+        5:   36:}
+        5:   36-block  0
+        -:   37:
+        -:   38:template<typename T> VectorDinamic<T>::~VectorDinamic() {
+        -:   39:    //eliberam zona de memorare alocata vectorului
+        -:   40:    delete[] e;
+        -:   41:}
+        -:   42:
+function _ZNK13VectorDinamicI6MasinaE3dimEv called 59 returned 100% blocks executed 100%
+       59:   43:template<typename T> int VectorDinamic<T>::dim() const{
+       59:   44:    return n;
+       59:   44-block  0
+        -:   45:}
+        -:   46:
+        -:   47:template<typename T> T VectorDinamic<T>::element(int i) const{
+        -:   48:    return e[i];
+        -:   49:}
+        -:   50:
+function _ZN13VectorDinamicI6MasinaE13adaugaSfarsitES0_ called 10 returned 100% blocks executed 100%
+       10:   51:template<typename T> void VectorDinamic<T>::adaugaSfarsit(T elem) {
+        -:   52:    //daca s-a atins capacitatea maxima, redimensionam
+       10:   53:    if (n == cp)
+       10:   53-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 9
+        1:   54:        redim();
+        1:   54-block  0
+call    0 returned 1
+        -:   55:
+        -:   56:    //adaugam la sfarsit
+       10:   57:    this->e[n++] = elem;
+       10:   57-block  0
+call    0 returned 10
+       10:   58:}
+        -:   59:
+function _ZN13VectorDinamicI6MasinaE13stergeElementE8IteratorIS0_E called 2 returned 100% blocks executed 67%
+        2:   60:template<typename T> void VectorDinamic<T>::stergeElement(Iterator<T> it){
+        2:   61:    int i = it.getCurent();
+        2:   61-block  0
+call    0 returned 2
+       2*:   62:    for (; i < n - 1;i++){
+        2:   62-block  0
+branch  0 taken 0
+branch  1 taken 2 (fallthrough)
+    #####:   63:        this->e[i] = this->e[i + 1];
+    %%%%%:   63-block  0
+call    0 never executed
+        -:   64:    }
+        2:   65:    n--;
+        2:   66:}
+        -:   67:
+        -:   68:template<typename T>
+function _ZN13VectorDinamicI6MasinaE8iteratorEi called 18 returned 100% blocks executed 100%
+       18:   69:Iterator<T> VectorDinamic<T>::iterator(int index) {
+        -:   70:    //returnam un iterator pe vector
+       18:   71:    return Iterator<T>(*this, index);
+       18:   71-block  0
+call    0 returned 18
+        -:   72:}
+        -:   73:
+        -:   74:template <typename T>
+function _ZN8IteratorI6MasinaEC2ERK13VectorDinamicIS0_Ei called 18 returned 100% blocks executed 100%
+       18:   75:Iterator<T>::Iterator(const VectorDinamic<T>& collection, int index) : index(index), collection(collection) {}
+        -:   76:
+        -:   77:template <typename T>
+        -:   78:bool Iterator<T>::operator!=(const Iterator<T> & other) const {
+        -:   79:    return index != other.index;
+        -:   80:}
+        -:   81:
+        -:   82:template <typename T>
+        -:   83:T const & Iterator<T>::operator*() const{
+        -:   84:
+        -:   85:    return collection.element(index);
+        -:   86:}
+        -:   87:
+        -:   88:template <typename T>
+        -:   89:Iterator<T> const & Iterator<T>::operator++(){
+        -:   90:    ++index;
+        -:   91:    return *this;
+        -:   92:}
+        -:   93:
+        -:   94:template <typename T>
+        -:   95:inline Iterator<T> begin(VectorDinamic<T> const & collection){
+        -:   96:    return Iterator<T>(collection, 0);
+        -:   97:}
+        -:   98:
+        -:   99:template <typename T>
+        -:  100:inline Iterator<T> end(VectorDinamic<T> const & collection){
+        -:  101:    return Iterator<T>(collection, collection.dim());
+        -:  102:}
+        -:  103:
+        -:  104:template <typename T>
+function _ZN8IteratorI6MasinaE4primEv called 18 returned 100% blocks executed 100%
+       18:  105:void Iterator<T>::prim() {
+        -:  106:    //seteaza iteratorul pe prima pozitie din vector
+       18:  107:    index = 0;
+       18:  108:}
+        -:  109:
+        -:  110:template <typename T>
+function _ZN8IteratorI6MasinaE9getCurentEv called 2 returned 100% blocks executed 100%
+        2:  111:int Iterator<T>::getCurent() {
+        2:  112:    return index;
+        2:  112-block  0
+        -:  113:}
+        -:  114:
+        -:  115:template <typename T>
+function _ZNK8IteratorI6MasinaE5validEv called 56 returned 100% blocks executed 100%
+       56:  116:bool Iterator<T>::valid() const{
+        -:  117:    //verifica daca iteratorul indica spre un element al vectorului
+       56:  118:    return index < collection.dim();
+       56:  118-block  0
+call    0 returned 56
+        -:  119:}
+        -:  120:
+        -:  121:template <typename T>
+function _ZNK8IteratorI6MasinaE7elementEv called 21 returned 100% blocks executed 100%
+       21:  122:T Iterator<T>::element() const{
+        -:  123:    //elementul curent
+       21:  124:    return collection.e[index];
+       21:  124-block  0
+call    0 returned 21
+        -:  125:}
+        -:  126:
+        -:  127:
+        -:  128:template <typename T>
+function _ZN8IteratorI6MasinaE7urmatorEv called 16 returned 100% blocks executed 100%
+       16:  129:void Iterator<T>::urmator() {
+        -:  130:    //pentru ambele variante
+       16:  131:    index++;
+       16:  132:}

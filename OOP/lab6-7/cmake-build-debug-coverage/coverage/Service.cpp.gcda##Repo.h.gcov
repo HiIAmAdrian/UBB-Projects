@@ -1,0 +1,48 @@
+        -:    0:Source:/mnt/c/Users/astan/Desktop/OOP/lab6-7/repo/Repo.h
+        -:    0:Graph:/mnt/c/Users/astan/Desktop/OOP/lab6-7/cmake-build-debug-coverage/CMakeFiles/lab6_7.dir/service/Service.cpp.gcno
+        -:    0:Data:/mnt/c/Users/astan/Desktop/OOP/lab6-7/cmake-build-debug-coverage/CMakeFiles/lab6_7.dir/service/Service.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by astan on 4/3/2023.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef LAB6_7_REPO_H
+        -:    6:#define LAB6_7_REPO_H
+        -:    7:#include <utility>
+        -:    8:
+        -:    9:#include "../domain/Masina.h"
+        -:   10:#include "../domain/VectorDinamic.h"
+        -:   11:#include "../domain/VectorDinamic.cpp"
+        -:   12:
+        -:   13:typedef Masina Elemtype;
+        -:   14:class Repo {
+        -:   15:private:
+        -:   16:    VectorDinamic<Elemtype> list = VectorDinamic<Elemtype>(2);
+        -:   17:public:
+        -:   18:    Repo();
+        -:   19:    [[nodiscard]] const VectorDinamic<Elemtype>& getList() const noexcept;
+        -:   20:    void addToRepo(const Elemtype& e);
+        -:   21:    void deleteFromRepo(int nrInmatriculare);
+        -:   22:    Elemtype searchElement(int nrInmatriculare);
+        -:   23:    bool exist(Elemtype elem);
+        -:   24:};
+        -:   25:
+        -:   26:class RepoException: exception {
+        -:   27:protected:
+        -:   28:    string message;
+        -:   29:public:
+function _ZN13RepoExceptionC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   30:    explicit RepoException(string msg): message(std::move(msg)){};
+    %%%%%:   30-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:   31:    friend ostream& operator<<(ostream& out, const RepoException& ex);
+        -:   32:    [[nodiscard]] string getMessage() const {
+        -:   33:        return message;
+        -:   34:    }
+        -:   35:};
+        -:   36:
+        -:   37:
+        -:   38:ostream& operator<<(ostream& out, const RepoException& ex);
+        -:   39:#endif //LAB6_7_REPO_H
