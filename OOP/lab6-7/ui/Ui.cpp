@@ -44,7 +44,7 @@ void Ui::deleteObject(){
     cout<<"Elementul a fost sters cu succes!"<<endl<<endl;
 }
 
-/*void Ui::filterProducator() {
+void Ui::filterProducator() {
     string producator;
     cout<<"Introdu producatorul: ";
     cin>>producator;
@@ -64,7 +64,7 @@ void Ui::filterTip() {
     for (int i = 0; i < v.size(); i++){
         cout<<v.get(i)<<endl;
     }
-}*/
+}
 
 void Ui::modifyObject(){
     int nrInmatriculare;
@@ -138,12 +138,12 @@ int Ui::runUi() {
                 case 5:
                     searchObject();
                     break;
-                /*case 6:
+                case 6:
                     filterProducator();
                     break;
                 case 7:
                     filterTip();
-                    break;*/
+                    break;
                 case 8:
                     sortNrInmatriculare();
                     break;

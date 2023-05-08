@@ -4,10 +4,10 @@
 
 int main() {
     test_all();
-    /*Repo repo = Repo();
+    Repo repo = Repo();
     Service service = Service(repo);
     Ui ui = Ui(service);
-    ui.runUi();*/
+    ui.runUi();
 
     return 0;
 }

@@ -172,7 +172,7 @@ void test_sort(){
     assert(g[0].getProducator() == "Audi");
     assert(g[1].getProducator() == "Mercedes");
     assert(g[2].getProducator() == "Toyota");
-    assert(g[2].getModel() == "lolo");
+    assert(g[2].getModel() == "aodlo");
 
 
     vector<Elemtype> h = service.sortTip();
