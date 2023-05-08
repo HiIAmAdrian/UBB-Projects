@@ -7,15 +7,23 @@
 #include "../repo/Repo.h"
 #include "../domain/Validator.h"
 
+using namespace std;
+
 class Service {
 private:
     Repo& repo;
 public:
     explicit Service(Repo &repo1);
-    [[nodiscard]] const VectorDinamic<Elemtype>& getList() const;
-    void addToList(int nrInmatriculare, std::string producator, std::string model, std::string tip);
+    [[nodiscard]] VectorDinamic<Elemtype> getList() const;
+
+    [[nodiscard]] VectorDinamic<Elemtype> filterProducator(const string&) const;
+    [[nodiscard]] VectorDinamic<Elemtype> filterTip(const string&) const;
+    [[nodiscard]] vector<Elemtype> sortNrInmatriculare() const;
+    [[nodiscard]] vector<Elemtype> sortTip() const;
+    [[nodiscard]] vector<Elemtype> sortProducatorModel() const;
+    void addToList(int nrInmatriculare, string producator, string model, string tip);
     void deleteElement(int nrInmatriculare);
-    void modifyElement(int nrInmatriculare, std::string producator, std::string model, std::string tip);
+    void modifyElement(int nrInmatriculare, string producator, string model, string tip);
     Elemtype searchElement(int nrInmatriculare);
 
 };

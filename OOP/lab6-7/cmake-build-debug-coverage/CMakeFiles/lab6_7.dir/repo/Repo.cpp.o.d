@@ -152,5 +152,4 @@ CMakeFiles/lab6_7.dir/repo/Repo.cpp.o: \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
- /mnt/c/Users/astan/Desktop/OOP/lab6-7/repo/../domain/VectorDinamic.h \
- /mnt/c/Users/astan/Desktop/OOP/lab6-7/repo/../domain/VectorDinamic.cpp
+ /mnt/c/Users/astan/Desktop/OOP/lab6-7/repo/../domain/VectorDinamic.h

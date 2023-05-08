@@ -156,7 +156,6 @@ CMakeFiles/lab6_7.dir/main.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
  /mnt/c/Users/astan/Desktop/OOP/lab6-7/service/../repo/../domain/VectorDinamic.h \
- /mnt/c/Users/astan/Desktop/OOP/lab6-7/service/../repo/../domain/VectorDinamic.cpp \
  /mnt/c/Users/astan/Desktop/OOP/lab6-7/service/../domain/Validator.h \
  /mnt/c/Users/astan/Desktop/OOP/lab6-7/service/../domain/../domain/Masina.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \

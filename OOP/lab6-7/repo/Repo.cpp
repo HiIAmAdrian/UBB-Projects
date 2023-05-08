@@ -8,15 +8,15 @@ Repo::Repo()=default;
 const VectorDinamic<Elemtype>& Repo::getList() const noexcept{
     return this->list;
 }
+
 void Repo::addToRepo(const Elemtype& e) {
-    list.adaugaSfarsit(e);
+    list.add(e);
 }
 
 void Repo::deleteFromRepo(int nrInmatriculare) {
-    Iterator<Masina> it = this->list.iterator(0);
-    it.prim();
+    Iterator<Masina> it = this->list.begin();
     while (it.valid() && it.element().getNrInmatriculare() != nrInmatriculare)
-        it.urmator();
+        it.next();
 
     if (!it.valid()){
         throw RepoException("Elementul nu se afla in lista!");
@@ -25,14 +25,13 @@ void Repo::deleteFromRepo(int nrInmatriculare) {
 }
 
 Elemtype Repo::searchElement(int nrInmatriculare) {
-    Iterator<Masina> it = this->list.iterator(0);
-    it.prim();
+    Iterator<Masina> it = this->list.begin();
     if (!it.valid()){
         throw RepoException("Elementul nu se afla in lista!");
     }
     else {
         while (it.valid() && it.element().getNrInmatriculare() != nrInmatriculare)
-            it.urmator();
+            it.next();
 
         if (!it.valid()) {
             throw RepoException("Elementul nu se afla in lista!");
@@ -41,15 +40,14 @@ Elemtype Repo::searchElement(int nrInmatriculare) {
     }
 }
 
-bool Repo::exist(Elemtype elem) {
-    Iterator<Masina> it = this->list.iterator(0);
-    it.prim();
+bool Repo::exist(const Elemtype& elem) {
+    Iterator<Masina> it = this->list.begin();
     if (!it.valid()){
         return false;
     }
     else {
         while (it.valid() && it.element().getNrInmatriculare() != elem.getNrInmatriculare())
-            it.urmator();
+            it.next();
 
         if (!it.valid()) {
             return false;

@@ -8,19 +8,20 @@
 
 #include "../domain/Masina.h"
 #include "../domain/VectorDinamic.h"
-#include "../domain/VectorDinamic.cpp"
+
+using namespace std;
 
 typedef Masina Elemtype;
 class Repo {
 private:
-    VectorDinamic<Elemtype> list = VectorDinamic<Elemtype>(2);
+    VectorDinamic<Elemtype> list;
 public:
     Repo();
     [[nodiscard]] const VectorDinamic<Elemtype>& getList() const noexcept;
     void addToRepo(const Elemtype& e);
     void deleteFromRepo(int nrInmatriculare);
     Elemtype searchElement(int nrInmatriculare);
-    bool exist(Elemtype elem);
+    bool exist(const Elemtype& elem);
 };
 
 class RepoException: exception {

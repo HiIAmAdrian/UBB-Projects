@@ -19,11 +19,11 @@ void test_add(){
     }catch(RepoException& ex){
         assert(true);
     }
-    assert(service.getList().element(0).getNrInmatriculare() == 1);
-    assert(service.getList().element(1).getModel() == "lodlo");
-    assert(service.getList().element(1).getProducator() == "Mercedes");
-    assert(service.getList().element(1).getTip() == "tdh");
-    assert(service.getList().dim() == 3);
+    assert(service.getList().get(0).getNrInmatriculare() == 1);
+    assert(service.getList().get(1).getModel() == "lodlo");
+    assert(service.getList().get(1).getProducator() == "Mercedes");
+    assert(service.getList().get(1).getTip() == "tdh");
+    assert(service.getList().size() == 3);
 }
 
 void test_validation(){
@@ -61,7 +61,28 @@ void test_validation(){
     }catch(ValidationException& ex){
         assert(true);
     }
-    assert(service.getList().dim() == 0);
+    assert(service.getList().size() == 0);
+}
+
+void test_filter(){
+    Repo repo = Repo();
+    Service service = Service(repo);
+
+    service.addToList(1, "Toyota", "lolo", "th");
+    service.addToList(2, "Mercedes", "lodlo", "tdh");
+    service.addToList(3, "Toyota", "lolo", "th");
+
+    VectorDinamic<Masina> v = service.filterProducator("Toyota");
+    assert(v.size() == 2);
+    assert(v.get(0).getProducator() == "Toyota");
+    assert(v.get(1).getProducator() == "Toyota");
+
+    VectorDinamic<Masina> v2 = service.filterTip("tdh");
+    assert(v2.size() == 1);
+    assert(v2.get(0).getTip() == "tdh");
+
+    VectorDinamic<Masina> v3 = service.filterTip("abc");
+    assert(v3.size() == 0);
 }
 
 void test_delete(){
@@ -78,7 +99,7 @@ void test_delete(){
         assert(true);
     }
 
-    assert(service.getList().dim() == 1);
+    assert(service.getList().size() == 1);
 
 }
 
@@ -108,7 +129,7 @@ void test_modify(){
     service.addToList(2, "Mercedes", "lodlo", "tdh");
 
     service.modifyElement(2, "abc", "abc", "abc");
-    assert(service.getList().element(1).getProducator() == "abc");
+    assert(service.getList().get(1).getProducator() == "abc");
     try{
         service.modifyElement(3, "a", "a", "a");
         assert(false);
@@ -134,11 +155,39 @@ void test_search(){
     assert(m.getTip() == "tdh");
 }
 
+void test_sort(){
+    Repo repo = Repo();
+    Service service = Service(repo);
+    service.addToList(2, "Mercedes", "lodlo", "tdh");
+    service.addToList(1, "Toyota", "lolo", "th");
+    service.addToList(3, "Audi", "lodlo", "tdh");
+    service.addToList(4, "Toyota", "aodlo", "z");
+
+    vector<Elemtype> v = service.sortNrInmatriculare();
+    assert(v[0].getNrInmatriculare() == 1);
+    assert(v[1].getNrInmatriculare() == 2);
+    assert(v[2].getNrInmatriculare() == 3);
+
+    vector<Elemtype> g = service.sortProducatorModel();
+    assert(g[0].getProducator() == "Audi");
+    assert(g[1].getProducator() == "Mercedes");
+    assert(g[2].getProducator() == "Toyota");
+    assert(g[2].getModel() == "lolo");
+
+
+    vector<Elemtype> h = service.sortTip();
+    assert(h[0].getTip() == "tdh");
+    assert(h[1].getTip() == "tdh");
+    assert(h[2].getTip() == "th");
+}
+
 void test_all(){
     test_domain();
     test_add();
     test_validation();
     test_modify();
+    test_filter();
+    test_sort();
     test_delete();
     test_search();
 }

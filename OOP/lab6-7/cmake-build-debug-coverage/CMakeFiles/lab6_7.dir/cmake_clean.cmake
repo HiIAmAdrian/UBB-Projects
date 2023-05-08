@@ -3,8 +3,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/lab6_7.dir/domain/Masina.cpp.o.d"
   "CMakeFiles/lab6_7.dir/domain/Validator.cpp.o"
   "CMakeFiles/lab6_7.dir/domain/Validator.cpp.o.d"
-  "CMakeFiles/lab6_7.dir/domain/VectorDinamic.cpp.o"
-  "CMakeFiles/lab6_7.dir/domain/VectorDinamic.cpp.o.d"
   "CMakeFiles/lab6_7.dir/main.cpp.o"
   "CMakeFiles/lab6_7.dir/main.cpp.o.d"
   "CMakeFiles/lab6_7.dir/repo/Repo.cpp.o"

@@ -177,30 +177,6 @@ domain/Validator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_7.dir/build.make CMakeFiles/lab6_7.dir/domain/Validator.cpp.s
 .PHONY : domain/Validator.cpp.s
 
-domain/VectorDinamic.o: domain/VectorDinamic.cpp.o
-.PHONY : domain/VectorDinamic.o
-
-# target to build an object file
-domain/VectorDinamic.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_7.dir/build.make CMakeFiles/lab6_7.dir/domain/VectorDinamic.cpp.o
-.PHONY : domain/VectorDinamic.cpp.o
-
-domain/VectorDinamic.i: domain/VectorDinamic.cpp.i
-.PHONY : domain/VectorDinamic.i
-
-# target to preprocess a source file
-domain/VectorDinamic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_7.dir/build.make CMakeFiles/lab6_7.dir/domain/VectorDinamic.cpp.i
-.PHONY : domain/VectorDinamic.cpp.i
-
-domain/VectorDinamic.s: domain/VectorDinamic.cpp.s
-.PHONY : domain/VectorDinamic.s
-
-# target to generate assembly for a file
-domain/VectorDinamic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab6_7.dir/build.make CMakeFiles/lab6_7.dir/domain/VectorDinamic.cpp.s
-.PHONY : domain/VectorDinamic.cpp.s
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -336,9 +312,6 @@ help:
 	@echo "... domain/Validator.o"
 	@echo "... domain/Validator.i"
 	@echo "... domain/Validator.s"
-	@echo "... domain/VectorDinamic.o"
-	@echo "... domain/VectorDinamic.i"
-	@echo "... domain/VectorDinamic.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

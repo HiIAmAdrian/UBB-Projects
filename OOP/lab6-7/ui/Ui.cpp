@@ -29,8 +29,8 @@ void Ui::addObject() {
 void Ui::printList(){
     const VectorDinamic<Elemtype>& v = service.getList();
 
-    for (int i = 0; i < v.dim(); i++){
-        cout<<v.element(i)<<endl;
+    for (int i = 0; i < v.size(); i++){
+        cout<<v.get(i)<<endl;
     }
 
 }
@@ -43,6 +43,28 @@ void Ui::deleteObject(){
     service.deleteElement(nrInmatriculare);
     cout<<"Elementul a fost sters cu succes!"<<endl<<endl;
 }
+
+/*void Ui::filterProducator() {
+    string producator;
+    cout<<"Introdu producatorul: ";
+    cin>>producator;
+
+    const VectorDinamic<Elemtype>& v = service.filterProducator(producator);
+    for (int i = 0; i < v.size(); i++){
+        cout<<v.get(i)<<endl;
+    }
+}
+
+void Ui::filterTip() {
+    string tip;
+    cout<<"Introdu tipul: ";
+    cin>>tip;
+
+    const VectorDinamic<Elemtype>& v = service.filterTip(tip);
+    for (int i = 0; i < v.size(); i++){
+        cout<<v.get(i)<<endl;
+    }
+}*/
 
 void Ui::modifyObject(){
     int nrInmatriculare;
@@ -70,14 +92,34 @@ void Ui::searchObject() {
     cout<<"Numar inmatriculare: ";
     cin>>nrInmatriculare;
     cout<<service.searchElement(nrInmatriculare)<<endl<<endl;
+}
 
+void Ui::sortNrInmatriculare() {
+    vector<Elemtype> v = service.sortNrInmatriculare();
+    for (const auto & i : v){
+        cout<<i<<endl;
+    }
+}
+
+void Ui::sortTip() {
+    vector<Elemtype>v = service.sortTip();
+    for (const auto & i : v){
+        cout<<i<<endl;
+    }
+}
+
+void Ui::sortProducatorModel() {
+    vector<Elemtype> v = service.sortProducatorModel();
+    for (const auto & i : v){
+        cout<<i<<endl;
+    }
 }
 
 int Ui::runUi() {
     int input;
     bool runCondition = true;
     while(runCondition){
-        cout<<"MENIU:"<<endl<<"1. Printeaza lista de masini"<<endl<<"2. Adauga o masina la lista"<<endl<<"3. Sterge o masina din lista"<<endl<<"4. Modifica o masina"<<endl<<"5. Cauta masina"<<endl<<"0. Exit"<<endl<<endl;
+        cout<<"MENIU:"<<endl<<"1. Printeaza lista de masini"<<endl<<"2. Adauga o masina la lista"<<endl<<"3. Sterge o masina din lista"<<endl<<"4. Modifica o masina"<<endl<<"5. Cauta masina"<<endl<<"6. Filtrare producator"<<endl<<"7. Filtrare Tip"<<endl<<"8. Sortare nrInmatriculare\n"<<"9. Sortare tip\n"<<"10. Sortare producator+model\n"<<"0. Exit"<<endl<<endl;
         cin>>input;
         try {
             switch (input) {
@@ -95,6 +137,21 @@ int Ui::runUi() {
                     break;
                 case 5:
                     searchObject();
+                    break;
+                /*case 6:
+                    filterProducator();
+                    break;
+                case 7:
+                    filterTip();
+                    break;*/
+                case 8:
+                    sortNrInmatriculare();
+                    break;
+                case 9:
+                    sortTip();
+                    break;
+                case 10:
+                    sortProducatorModel();
                     break;
                 case 0:
                     runCondition = false;

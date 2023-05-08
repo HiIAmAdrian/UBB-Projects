@@ -94,9 +94,6 @@
 		<Unit filename="/mnt/c/Users/astan/Desktop/OOP/lab6-7/domain/Validator.h">
 			<Option target="lab6_7"/>
 		</Unit>
-		<Unit filename="/mnt/c/Users/astan/Desktop/OOP/lab6-7/domain/VectorDinamic.cpp">
-			<Option target="lab6_7"/>
-		</Unit>
 		<Unit filename="/mnt/c/Users/astan/Desktop/OOP/lab6-7/domain/VectorDinamic.h">
 			<Option target="lab6_7"/>
 		</Unit>

@@ -15,6 +15,11 @@ private:
     void deleteObject();
     void modifyObject();
     void searchObject();
+    void filterProducator();
+    void filterTip();
+    void sortNrInmatriculare();
+    void sortTip();
+    void sortProducatorModel();
 public:
     explicit Ui(const Service &service);
     int runUi();
